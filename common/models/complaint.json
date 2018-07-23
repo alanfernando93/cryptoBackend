@@ -1,0 +1,23 @@
+{
+  "name": "Complaint",
+  "base": "App",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "type": {
+      "type": "string"
+    },
+    "comment": {
+      "type": "string"
+    },
+    "posts": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,29 @@
+{
+  "name": "Transaction",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "type": {
+      "type": "boolean"
+    },
+    "mount": {
+      "type": "number"
+    },
+    "cost": {
+      "type": "number"
+    },
+    "active": {
+      "type": "boolean"
+    },
+    "reason": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

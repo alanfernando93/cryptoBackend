@@ -1,0 +1,23 @@
+{
+  "name": "offer",
+  "base": "App",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "tyoe": {
+      "type": "number"
+    },
+    "hours": {
+      "type": "number"
+    },
+    "posts": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

@@ -1,6 +1,32 @@
 {
   "db": {
+    "host": "localhost",
+    "port": 3306,
+    "url": "",
+    "database": "criptoanalisis",
+    "password": "1234567",
     "name": "db",
-    "connector": "memory"
+    "user": "test",
+    "connector": "mysql",
+    "connectionLimit": 100
+  },
+  "emailDs": {
+    "name": "emailDs",
+    "connector": "mail",
+    "transports": [
+      {
+        "type": "smtp",
+        "host": "smtp.gmail.com",
+        "secure": true,
+        "port": 465,
+        "tls": {
+          "rejectUnauthorized": false
+        },
+        "auth": {
+          "user": "personalprofecasa@gmail.com",
+          "pass": "4196054m"
+        }
+      }
+    ]
   }
 }

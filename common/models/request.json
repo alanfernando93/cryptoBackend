@@ -1,0 +1,23 @@
+{
+  "name": "Request",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "active": {
+      "type": "boolean"
+    },
+    "accepted": {
+      "type": "boolean"
+    },
+    "expiration": {
+      "type": "date"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

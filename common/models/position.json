@@ -1,0 +1,29 @@
+{
+  "name": "Position",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "value": {
+      "type": "number"
+    },
+    "capitalPercentage": {
+      "type": "number"
+    },
+    "category": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    },
+    "reached": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

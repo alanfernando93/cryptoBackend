@@ -1,0 +1,26 @@
+{
+  "name": "Title",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "correspondence": {
+      "type": "string"
+    },
+    "link": {
+      "type": "string"
+    },
+    "question": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

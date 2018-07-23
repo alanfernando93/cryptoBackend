@@ -34,5 +34,81 @@
   "Role": {
     "dataSource": "db",
     "public": false
+  },
+  "Usuario": {
+    "dataSource": "db",
+    "public": true
+  },
+  "News": {
+    "dataSource": "db",
+    "public": true
+  },
+  "App": {
+    "dataSource": null,
+    "public": false
+  },
+  "Coin": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Market": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Signal": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Title": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Idea": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Proyect": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Comment": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Answer": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Follow": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Chat": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Complaint": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Position": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Point": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Request": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Transaction": {
+    "dataSource": "db",
+    "public": true
+  },
+  "offer": {
+    "dataSource": "db",
+    "public": true
   }
 }
