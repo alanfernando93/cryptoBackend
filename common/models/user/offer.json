@@ -1,5 +1,5 @@
 {
-  "name": "offer",
+  "name": "Offer",
   "base": "PersistedModel",
   "idInjection": true,
   "strict": false,

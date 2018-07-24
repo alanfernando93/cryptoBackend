@@ -23,7 +23,13 @@
     "aboutCoach": "string"
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "User": {
+      "type": "belongsTo",
+      "model": "Usuario",
+      "foreignKey": "userId"
+    }
+  },
   "acls": [],
   "methods": {}
 }

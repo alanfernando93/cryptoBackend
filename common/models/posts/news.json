@@ -24,15 +24,16 @@
   },
   "validations": [],
   "relations": {
-    "user": {
+    "Comment": {
+      "type": "hasMany",
+      "model": "Usuario",
+      "foreignKey": "userId",
+      "through": "Comment"
+    },
+    "User": {
       "type": "belongsTo",
       "model": "Usuario",
       "foreignKey": "userId"
-    },
-    "comment": {
-      "type": "hasMany",
-      "model": "Comment",
-      "foreignKey": "commentId"
     }
   },
   "acls": [],

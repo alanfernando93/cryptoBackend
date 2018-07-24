@@ -11,7 +11,18 @@
   },
   "properties": {},
   "validations": [],
-  "relations": {},
+  "relations": {
+    "User": {
+      "type": "belongsTo",
+      "model": "Usuario",
+      "foreignKey": "userId"
+    },
+    "Follower": {
+      "type": "belongsTo",
+      "model": "Usuario",
+      "foreignKey": "followerId"
+    }
+  },
   "acls": [],
   "methods": {}
 }

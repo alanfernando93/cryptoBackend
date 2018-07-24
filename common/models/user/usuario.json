@@ -50,15 +50,23 @@
   },
   "validations": [],
   "relations": {
-    "signal": {
+    "Signal": {
       "type": "hasMany",
       "model": "Signal",
-      "foreignKey": ""
+      "foreignKey": "userId",
+      "through": "Comment"
     },
-    "news": {
+    "News": {
       "type": "hasMany",
       "model": "News",
-      "foreignKey": ""
+      "foreignKey": "userId",
+      "through": "Comment"
+    },
+    "Comment": {
+      "type": "hasMany",
+      "model": "Comment",
+      "foreignKey": "userId",
+      "through": "Answer"
     }
   },
   "acls": [],

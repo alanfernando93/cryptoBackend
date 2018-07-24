@@ -13,12 +13,23 @@
     "content": {
       "type": "string"
     },
-    "posts": {
+    "modelName": {
       "type": "string"
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "User": {
+      "type": "belongsTo",
+      "model": "Usuario",
+      "foreignKey": "userId"
+    },
+    "Comment": {
+      "type": "belongsTo",
+      "model": "Comment",
+      "foreignKey": "commentId"
+    }
+  },
   "acls": [],
   "methods": {}
 }

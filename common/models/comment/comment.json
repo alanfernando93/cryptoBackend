@@ -13,16 +13,22 @@
     "content": {
       "type": "string"
     },
-    "posts": {
+    "modelName": {
       "type": "string"
     }
   },
   "validations": [],
   "relations": {
-    "user": {
+    "User": {
       "type": "belongsTo",
       "model": "Usuario",
       "foreignKey": "userId"
+    },
+    "Users": {
+      "type": "hasMany",
+      "model": "Usuario",
+      "foreignKey": "commentId",
+      "through": "Answer"
     },
     "signal": {
       "type": "belongsTo",
