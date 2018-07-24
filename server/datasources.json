@@ -8,7 +8,7 @@
     "name": "db",
     "user": "test",
     "connector": "mysql",
-    "connectionLimit": 100
+    "connectionLimit": 200
   },
   "emailDs": {
     "name": "emailDs",

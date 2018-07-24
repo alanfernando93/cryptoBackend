@@ -49,7 +49,18 @@
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "signal": {
+      "type": "hasMany",
+      "model": "Signal",
+      "foreignKey": ""
+    },
+    "news": {
+      "type": "hasMany",
+      "model": "News",
+      "foreignKey": ""
+    }
+  },
   "acls": [],
   "methods": {}
 }

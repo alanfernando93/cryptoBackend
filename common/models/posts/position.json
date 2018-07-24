@@ -27,7 +27,18 @@
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "signal": {
+      "type": "belongsTo",
+      "model": "Signal",
+      "foreignKey": ""
+    },
+    "point": {
+      "type": "belongsTo",
+      "model": "Point",
+      "foreignkey": ""
+    }
+  },
   "acls": [],
   "methods": {}
 }
