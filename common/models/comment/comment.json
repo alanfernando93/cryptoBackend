@@ -1,16 +1,20 @@
 {
-  "name": "Idea",
-  "base": "App",
+  "name": "Comment",
+  "base": "PersistedModel",
   "idInjection": true,
+  "strict": false,
   "options": {
     "validateUpsert": true
+  },
+  "mixins": {
+    "Timestamp": true
   },
   "properties": {
     "content": {
       "type": "string"
     },
-    "qualidication": {
-      "type": "number"
+    "posts": {
+      "type": "string"
     }
   },
   "validations": [],

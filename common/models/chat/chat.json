@@ -1,9 +1,13 @@
 {
-  "name": "Follow",
-  "base": "App",
+  "name": "Chat",
+  "base": "PersistedModel",
   "idInjection": true,
+  "strict": false,
   "options": {
     "validateUpsert": true
+  },
+  "mixins": {
+    "Timestamp": true
   },
   "properties": {},
   "validations": [],

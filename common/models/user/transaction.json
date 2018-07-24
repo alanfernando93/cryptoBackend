@@ -1,18 +1,28 @@
 {
-  "name": "offer",
-  "base": "App",
+  "name": "Transaction",
+  "base": "PersistedModel",
   "idInjection": true,
+  "strict": false,
   "options": {
     "validateUpsert": true
   },
+  "mixins": {
+    "Timestamp": true
+  },
   "properties": {
-    "tyoe": {
+    "type": {
+      "type": "boolean"
+    },
+    "mount": {
       "type": "number"
     },
-    "hours": {
+    "cost": {
       "type": "number"
     },
-    "posts": {
+    "active": {
+      "type": "boolean"
+    },
+    "reason": {
       "type": "string"
     }
   },
@@ -20,4 +30,5 @@
   "relations": {},
   "acls": [],
   "methods": {}
+  
 }

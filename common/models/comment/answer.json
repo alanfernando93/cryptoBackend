@@ -1,24 +1,19 @@
 {
-  "name": "Transaction",
+  "name": "Answer",
   "base": "PersistedModel",
   "idInjection": true,
+  "strict": false,
   "options": {
     "validateUpsert": true
   },
+  "mixins": {
+    "Timestamp": true
+  },
   "properties": {
-    "type": {
-      "type": "boolean"
+    "content": {
+      "type": "string"
     },
-    "mount": {
-      "type": "number"
-    },
-    "cost": {
-      "type": "number"
-    },
-    "active": {
-      "type": "boolean"
-    },
-    "reason": {
+    "posts": {
       "type": "string"
     }
   },

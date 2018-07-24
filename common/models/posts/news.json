@@ -1,0 +1,29 @@
+{
+  "name": "News",
+  "base": "PersistedModel",
+  "idInjection": false,
+  "strict": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "mixins": {
+    "Timestamp": true,
+    "Posts": true
+  },
+  "properties": {
+    "title": "string",
+    "guessCoin": {
+      "type": "string"
+    },
+    "guessPrice": {
+      "type": "string"
+    },
+    "sources": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}  
+}

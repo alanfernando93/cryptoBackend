@@ -2,8 +2,12 @@
   "name": "Position",
   "base": "PersistedModel",
   "idInjection": true,
+  "strict": false,
   "options": {
     "validateUpsert": true
+  },
+  "mixins": {
+    "Timestamp": true
   },
   "properties": {
     "value": {

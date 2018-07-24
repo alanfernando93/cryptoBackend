@@ -1,16 +1,18 @@
 {
-  "name": "Answer",
+  "name": "Idea",
   "base": "PersistedModel",
   "idInjection": true,
+  "strict": false,
   "options": {
     "validateUpsert": true
   },
+  "mixins": {
+    "Timestamp": true,
+    "Posts": true
+  },
   "properties": {
-    "content": {
-      "type": "string"
-    },
-    "posts": {
-      "type": "string"
+    "qualidication": {
+      "type": "number"
     }
   },
   "validations": [],

@@ -1,19 +1,23 @@
 {
-  "name": "App",
+  "name": "offer",
   "base": "PersistedModel",
   "idInjection": true,
+  "strict": false,
   "options": {
     "validateUpsert": true
   },
+  "mixins": {
+    "Timestamp": true
+  },
   "properties": {
-    "created": {
-      "type": "date"
-    },
-    "modified": {
-      "type": "date"
-    },
-    "status": {
+    "type": {
       "type": "boolean"
+    },
+    "hours": {
+      "type": "number"
+    },
+    "posts": {
+      "type": "string"
     }
   },
   "validations": [],

@@ -1,0 +1,44 @@
+{
+  "name": "Signal",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "strict": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "mixins": {
+    "Timestamp": true,
+    "Posts": true
+  },
+  "properties": {
+    "offer": {
+      "type": "boolean"
+    },
+    "investmentType": "string",
+    "fundamentalAnalysis": {
+      "type": "string",
+      "required": false,
+      "dataType": "text"
+    },
+    "technicalAnalysis": {
+      "type": "string",
+      "required": false,
+      "dataType": "text"
+    },
+    "exitStrategy": {
+      "type": "string",
+      "required": false,
+      "dataType": "text"
+    },
+    "tags": "string",
+    "precision": "number",
+    "currencyExchange": "string",
+    "exchange": "string",
+    "PEP": "string",
+    "PSP": "string"
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

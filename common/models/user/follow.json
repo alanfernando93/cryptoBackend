@@ -1,18 +1,15 @@
 {
-  "name": "Comment",
+  "name": "Follow",
   "base": "PersistedModel",
   "idInjection": true,
+  "strict": false,
   "options": {
     "validateUpsert": true
   },
-  "properties": {
-    "content": {
-      "type": "string"
-    },
-    "posts": {
-      "type": "string"
-    }
+  "mixins": {
+    "Timestamp": true
   },
+  "properties": {},
   "validations": [],
   "relations": {},
   "acls": [],

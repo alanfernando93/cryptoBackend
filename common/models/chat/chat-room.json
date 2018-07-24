@@ -1,18 +1,19 @@
 {
-  "name": "Complaint",
-  "base": "App",
+  "name": "ChatRoom",
+  "base": "PersistedModel",
   "idInjection": true,
+  "strict": false,
   "options": {
     "validateUpsert": true
   },
+  "mixins": {
+    "Timestamp": true
+  },
   "properties": {
-    "type": {
+    "message": {
       "type": "string"
     },
-    "comment": {
-      "type": "string"
-    },
-    "posts": {
+    "groupKey": {
       "type": "string"
     }
   },

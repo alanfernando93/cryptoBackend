@@ -22,6 +22,30 @@
       ],
       "required": false,
       "default": "[]"
+    },
+    "fame": {
+      "type": [
+        "object"
+      ],
+      "requiered": false,
+      "default": "[]"
+    },
+    "brithdate" : {
+      "type": "date"
+    },
+    "points": {
+      "type": "number"
+    },
+    "precision": {
+      "type": "object",
+      "default": {
+        "valor": 0,
+        "nropost": 0
+      }
+    },
+    "visit": {
+      "type": "number",
+      "default": 0
     }
   },
   "validations": [],

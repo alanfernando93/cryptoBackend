@@ -1,0 +1,29 @@
+{
+  "name": "Advisory",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "strict": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "mixins": {
+    "Timestamp": true,
+    "Posts": true
+  },
+  "properties": {
+    "title": "string",
+    "location": "string",
+    "modality": "string",
+    "thematic": "string",
+    "coachTerms": "string",
+    "additionalAdvantages": "string",
+    "cost": "number",
+    "language": "string",
+    "hours": "number",
+    "aboutCoach": "string"
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
