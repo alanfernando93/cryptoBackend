@@ -21,7 +21,22 @@
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "news": {
+      "type": "belongsTo",
+      "polymorphic": {
+        "foreignKey": "modelId",
+        "discriminator": "modelName"
+      }
+    },
+    "signal": {
+      "type": "belongsTo",
+      "polymorphic": {
+        "foreignKey": "modelId",
+        "discriminator": "modelName"
+      }
+    }
+  },
   "acls": [],
   "methods": {}
 }

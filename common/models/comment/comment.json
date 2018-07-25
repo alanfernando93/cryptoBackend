@@ -25,6 +25,24 @@
     "user": {
       "type": "belongsTo",
       "model": "Usuario"
+    },
+    "answer": {
+      "type": "hasMany",
+      "model": "Answer"
+    },
+    "news": {
+      "type": "belongsTo",
+      "polymorphic": {
+        "foreignKey": "modelId",
+        "discriminator": "modelName"
+      }
+    },
+    "signal": {
+      "type": "belongsTo",
+      "polymorphic": {
+        "foreignKey": "modelId",
+        "discriminator": "modelName"
+      }
     }
   },
   "acls": [],

@@ -28,6 +28,14 @@
       "type": "belongsTo",
       "model": "Usuario",
       "foreignKey": ""
+    },
+    "comments": {
+      "type": "hasMany",
+      "model": "Comment",
+      "polymorphic": {
+        "foreignKey": "modelId",
+        "discriminator": "modelName"
+       } 
     }
   },
   "acls": [],

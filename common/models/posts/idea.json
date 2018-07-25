@@ -19,7 +19,8 @@
   "relations": {
     "user": {
       "type": "belongsTo",
-      "model": "Usuario"
+      "model": "Usuario",
+      "foreignKey": ""
     },
     "coin": {
       "type": "belongsTo",

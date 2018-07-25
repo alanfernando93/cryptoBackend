@@ -58,12 +58,22 @@
     "signals": {
       "type": "hasMany",
       "model": "Signal",
-      "foreignKey": ""
+      "foreignKey": "userId",
+      "through": "Comment",
+      "polymorphic": {
+        "foreignKey": "modelId",
+        "discriminator": "modelName"
+      }
     },
     "news": {
       "type": "hasMany",
       "model": "News",
-      "foreignKey": "userId"
+      "foreignKey": "userId",
+      "through": "Comment",
+      "polymorphic": {
+        "foreignKey": "modelId",
+        "discriminator": "modelName"
+      }
     }
   },
   "acls": [
@@ -104,58 +114,5 @@
       "permission": "ALLOW"
     }
   ],
-  "methods": {
-    "upload": {
-      "http": {
-        "path": "/:id/upload",
-        "verb": "post"
-      },
-      "accepts": [
-        {
-          "arg": "req",
-          "type": "object",
-          "http": {
-            "source": "req"
-          }
-        },
-        {
-          "arg": "res",
-          "type": "object",
-          "http": {
-            "source": "res"
-          }
-        }
-      ],
-      "returns": {
-        "arg": "status",
-        "type": "string"
-      }
-    },
-    "updateInfo": {
-      "http": {
-        "path": "/:id/updateInfo",
-        "verb": "put"
-      },
-      "accepts": [
-        {
-          "arg": "req",
-          "type": "object",
-          "http": {
-            "path": "req"
-          }
-        },
-        {
-          "arg": "res",
-          "type": "object",
-          "http": {
-            "source": "res"
-          }
-        }
-      ],
-      "returns": {
-        "arg": "user",
-        "type": "object"
-      }
-    }
-  }
+  "methods": {}
 }

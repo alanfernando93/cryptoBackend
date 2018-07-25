@@ -120,25 +120,25 @@ module.exports = {
   Comment: [
     {
       content: 'Hola, hay alguien',
-      modelName: 'signal',
+      modelName: 'Signal',
       modelId: 1,
       status: true,
       userId: 1,
     }, {
       content: 'hay alguien',
-      modelName: 'signal',
+      modelName: 'Signal',
       modelId: 1,
       status: true,
       userId: 1,
     }, {
       content: 'en serio, hay alguien!!! X(',
-      modelName: 'signal',
+      modelName: 'Signal',
       modelId: 1,
       status: true,
       userId: 1,
     }, {
       content: 'Hola, hay alguien',
-      modelName: 'news',
+      modelName: 'News',
       modelId: 2,
       status: true,
       userId: 2,
@@ -147,25 +147,29 @@ module.exports = {
   Answer: [
     {
       content: 'yo te estoy respondiendo',
-      modelName: 'signal',
+      modelName: 'Signal',
+      modelId: 2,
       commentId: 1,
       status: true,
       userId: 3,
     }, {
       content: 'pero no me escuchas',
-      modelName: 'signal',
+      modelName: 'Signal',
+      modelId: 2,
       commentId: 1,
       status: true,
       userId: 3,
     }, {
       content: 'yo te estoy respondiendo',
-      modelName: 'signal',
+      modelName: 'Signal',
+      modelId: 2,
       commentId: 2,
       status: true,
       userId: 4,
     }, {
       content: 'pero no me escuchas',
-      modelName: 'signal',
+      modelName: 'Signal',
+      modelId: 2,
       commentId: 1,
       status: true,
       userId: 3,

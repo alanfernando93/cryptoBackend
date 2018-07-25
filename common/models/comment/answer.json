@@ -22,6 +22,10 @@
     "user": {
       "type": "belongsTo",
       "model": "Usuario"
+    },
+    "comment": {
+      "type": "belongsTo",
+      "model": "Comment"
     }
   },
   "acls": [],
