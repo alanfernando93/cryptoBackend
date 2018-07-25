@@ -119,5 +119,9 @@
   "ChatRoom": {
     "dataSource": "db",
     "public": true
+  },
+  "Posts": {
+    "dataSource": "db",
+    "public": true
   }
 }

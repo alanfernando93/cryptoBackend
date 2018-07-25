@@ -15,30 +15,16 @@
     },
     "modelName": {
       "type": "string"
+    },
+    "modelId": {
+      "type": "number"
     }
   },
   "validations": [],
   "relations": {
-    "User": {
+    "user": {
       "type": "belongsTo",
-      "model": "Usuario",
-      "foreignKey": "userId"
-    },
-    "Users": {
-      "type": "hasMany",
-      "model": "Usuario",
-      "foreignKey": "commentId",
-      "through": "Answer"
-    },
-    "signal": {
-      "type": "belongsTo",
-      "model": "Signal",
-      "foreignKey": "modelId"
-    },
-    "news": {
-      "type": "belongsTo",
-      "model": "News",
-      "foreignKey": "modelId"
+      "model": "Usuario"
     }
   },
   "acls": [],

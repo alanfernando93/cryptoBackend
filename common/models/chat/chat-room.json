@@ -19,10 +19,9 @@
   },
   "validations": [],
   "relations": {
-    "User": {
+    "user": {
       "type": "belongsTo",
-      "model": "Usuario",
-      "foreignKey": "userId"
+      "model": "Usuario"
     }
   },
   "acls": [],

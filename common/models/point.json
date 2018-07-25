@@ -17,8 +17,7 @@
   "relations": {
     "position": {
       "type": "hasMany",
-      "model": "Position",
-      "foreignkey": ""
+      "model": "Position"
     }
   },
   "acls": [],

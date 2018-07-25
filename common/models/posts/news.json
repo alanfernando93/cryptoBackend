@@ -24,18 +24,12 @@
   },
   "validations": [],
   "relations": {
-    "Comment": {
-      "type": "hasMany",
-      "model": "Usuario",
-      "foreignKey": "userId",
-      "through": "Comment"
-    },
-    "User": {
+    "user": {
       "type": "belongsTo",
       "model": "Usuario",
-      "foreignKey": "userId"
+      "foreignKey": ""
     }
   },
   "acls": [],
-  "methods": {}  
+  "methods": {}
 }

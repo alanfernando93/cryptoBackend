@@ -12,7 +12,12 @@
   },
   "properties": {},
   "validations": [],
-  "relations": {},
+  "relations": {
+    "market": {
+      "type": "belongsTo",
+      "model": "Market"
+    }
+  },
   "acls": [],
   "methods": {}
 }

@@ -19,15 +19,9 @@
   },
   "validations": [],
   "relations": {
-    "User": {
+    "user": {
       "type": "belongsTo",
-      "model": "Usuario",
-      "foreignKey": "userId"
-    },
-    "Comment": {
-      "type": "belongsTo",
-      "model": "Comment",
-      "foreignKey": "commentId"
+      "model": "Usuario"
     }
   },
   "acls": [],

@@ -12,15 +12,13 @@
   "properties": {},
   "validations": [],
   "relations": {
-    "User": {
+    "user": {
       "type": "belongsTo",
-      "model": "Usuario",
-      "foreignKey": "userId"
+      "model": "Usuario"
     },
-    "Follower": {
+    "follower": {
       "type": "belongsTo",
-      "model": "Usuario",
-      "foreignKey": "followerId"
+      "model": "Usuario"
     }
   },
   "acls": [],

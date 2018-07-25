@@ -12,60 +12,64 @@ module.exports = {
       'name': 'premium',
     },
   ],
-  RoleMapping: [{
-    principalType: 'USER',
-    principalId: 1,
-    roleId: 1,
-  }],
-  Usuario: [{
-    'firstName': 'Tony',
-    'lastName': 'Stark',
-    'username': 'ironman',
-    'password': 'ironman',
-    'emailVerified': true,
-    'email': 'ironman@test.com',
-    'fame': [{
-      'id': 1,
-      'value': 84,
-      'symbol': 'BTC',
-    }],
-  }, {
-    'firstName': 'Peter',
-    'lastName': 'Parker',
-    'username': 'spiderman',
-    'password': 'spiderman',
-    'emailVerified': true,
-    'email': 'spiderman@test.com',
-    'fame': [{
-      'id': 3,
-      'value': 100,
-      'symbol': 'XRP',
-    }],
-  }, {
-    'firstName': 'Bruce',
-    'lastName': 'Banner',
-    'username': 'hulk',
-    'password': 'hulk',
-    'emailVerified': true,
-    'email': 'hulk@test.com',
-    'fame': [{
-      'id': 2,
-      'value': 2,
-      'symbol': 'ETH',
-    }],
-  }, {
-    'firstName': 'Thor',
-    'lastName': 'Skgar',
-    'username': 'thor',
-    'password': 'thor',
-    'emailVerified': true,
-    'email': 'thor@test.com',
-    'fame': [{
-      'id': 3,
-      'value': 100,
-      'symbol': 'BCH',
-    }],
-  }],
+  RoleMapping: [
+    {
+      principalType: 'USER',
+      principalId: 1,
+      roleId: 1,
+    },
+  ],
+  Usuario: [
+    {
+      'firstName': 'Tony',
+      'lastName': 'Stark',
+      'username': 'ironman',
+      'password': 'ironman',
+      'emailVerified': true,
+      'email': 'ironman@test.com',
+      'fame': [{
+        'id': 1,
+        'value': 84,
+        'symbol': 'BTC',
+      }],
+    }, {
+      'firstName': 'Peter',
+      'lastName': 'Parker',
+      'username': 'spiderman',
+      'password': 'spiderman',
+      'emailVerified': true,
+      'email': 'spiderman@test.com',
+      'fame': [{
+        'id': 3,
+        'value': 100,
+        'symbol': 'XRP',
+      }],
+    }, {
+      'firstName': 'Bruce',
+      'lastName': 'Banner',
+      'username': 'hulk',
+      'password': 'hulk',
+      'emailVerified': true,
+      'email': 'hulk@test.com',
+      'fame': [{
+        'id': 2,
+        'value': 2,
+        'symbol': 'ETH',
+      }],
+    }, {
+      'firstName': 'Thor',
+      'lastName': 'Skgar',
+      'username': 'thor',
+      'password': 'thor',
+      'emailVerified': true,
+      'email': 'thor@test.com',
+      'fame': [{
+        'id': 3,
+        'value': 100,
+        'symbol': 'BCH',
+      }],
+    },
+  ],
   Coin: [
     {
       'name': 'Bitcoin',
@@ -113,160 +117,216 @@ module.exports = {
   // 'disputa': [],
   // instruccion: [],
   Offer: [],
-  Comment: [],
-  Answer: [],
+  Comment: [
+    {
+      content: 'Hola, hay alguien',
+      modelName: 'signal',
+      modelId: 1,
+      status: true,
+      userId: 1,
+    }, {
+      content: 'hay alguien',
+      modelName: 'signal',
+      modelId: 1,
+      status: true,
+      userId: 1,
+    }, {
+      content: 'en serio, hay alguien!!! X(',
+      modelName: 'signal',
+      modelId: 1,
+      status: true,
+      userId: 1,
+    }, {
+      content: 'Hola, hay alguien',
+      modelName: 'news',
+      modelId: 2,
+      status: true,
+      userId: 2,
+    },
+  ],
+  Answer: [
+    {
+      content: 'yo te estoy respondiendo',
+      modelName: 'signal',
+      commentId: 1,
+      status: true,
+      userId: 3,
+    }, {
+      content: 'pero no me escuchas',
+      modelName: 'signal',
+      commentId: 1,
+      status: true,
+      userId: 3,
+    }, {
+      content: 'yo te estoy respondiendo',
+      modelName: 'signal',
+      commentId: 2,
+      status: true,
+      userId: 4,
+    }, {
+      content: 'pero no me escuchas',
+      modelName: 'signal',
+      commentId: 1,
+      status: true,
+      userId: 3,
+    },
+  ],
   Market: [],
-  Title: [{
-    'name': 'Detalle del proyecto ',
-  }, {
-    'name': 'Introducción',
-    'correspondence': 1,
-    'link': 'introduccion.html',
-  }, {
-    'name': 'Detalles de la tecnología',
-    'correspondence': 1,
-    'link': 'detallestecnologia.html',
-  }, {
-    'name': 'Road-map y producto mínimo viable',
-    'correspondence': 1,
-    'link': 'road-mapproductominimoviable.html',
-  }, {
-    'name': 'Contrapartes en la tecnología centralizada',
-    'correspondence': 1,
-    'link': 'contrapartestecnologiacentralizada.html',
-  }, {
-    'name': 'Necesidad de ser descentralizado',
-    'correspondence': 1,
-    'link': 'necesidadserdescentralizado.html',
-  }, {
-    'name': 'Necesidad',
-    'correspondence': 1,
-    'link': 'necesidad.html',
-  }, {
-    'name': 'Nicho de mercado',
-    'correspondence': 1,
-    'link': 'nichomercado.html',
-  }, {
-    'name': 'Diferencia competitiva',
-    'correspondence': 1,
-    'link': 'diferenciacompetitiva.html',
-  }, {
-    'name': 'Consideraciones',
-    'correspondence': 1,
-    'link': 'consideraciones1.html',
-  }, {
-    'name': 'Marketing',
-  }, {
-    'name': 'Calidad del equipo encargado',
-    'correspondence': 11,
-    'link': 'calidadequipoencargado.html',
-  }, {
-    'name': 'Medios de prensa',
-    'correspondence': 11,
-    'link': 'mediosprensa.html',
-  }, {
-    'name': 'Asociaciones',
-    'correspondence': 11,
-    'link': 'asociaciones.html',
-  }, {
-    'name': 'Calidad de imagen',
-    'correspondence': 11,
-    'link': 'calidadimagen.html',
-  }, {
-    'name': 'Consideraciones',
-    'correspondence': 11,
-    'link': 'consideraciones11.html',
-  }, {
-    'name': 'Redes sociales',
-  }, {
-    'name': 'Crecimiento',
-    'correspondence': 17,
-    'link': 'crecimiento.html',
-  }, {
-    'name': 'Reacción de seguidores',
-    'correspondence': 17,
-    'link': 'reaccionseguidores.html',
-  }, {
-    'name': 'Implicación',
-    'correspondence': 17,
-    'link': 'implicacion.html',
-  }, {
-    'name': 'Consideraciones',
-    'correspondence': 17,
-    'link': 'consideraciones17.html',
-  }, {
-    'name': 'Oferta Vs Demanda',
-  }, {
-    'name': 'Minería de datos',
-    'correspondence': 22,
-    'link': 'mineriadatos.html',
-  }, {
-    'name': 'Política inflacionaria',
-    'correspondence': 22,
-    'link': 'politicainflacionaria.html',
-  }, {
-    'name': 'Uso de tokens e indicador NVT',
-    'correspondence': 22,
-    'link': 'usotokensindicadornvt.html',
-  }, {
-    'name': 'Estimación del tamaño de mercado',
-    'correspondence': 22,
-    'link': 'estimaciontamanomercado.html',
-  }, {
-    'name': 'Comparación entre oferta y demanda',
-    'correspondence': 22,
-    'link': 'comparacionofertademanda.html',
-  }, {
-    'name': 'Consideraciones',
-    'correspondence': 22,
-    'link': 'consideraciones22.html',
-  }, {
-    'name': 'Equipo',
-  }, {
-    'name': 'Directivos',
-    'correspondence': 29,
-    'link': 'directivos.html',
-  }, {
-    'name': 'Asesores',
-    'correspondence': 29,
-    'link': 'asesores.html',
-  }, {
-    'name': 'Frecuencia de actualizaciones en Github',
-    'correspondence': 29,
-    'link': 'recuenciaactualizacionesgithub.html',
-  }, {
-    'name': 'Consideraciones',
-    'correspondence': 29,
-    'link': 'consideraciones29.html',
-  }, {
-    'name': 'Conclusiones',
-  }, {
-    'name': 'Conclusion',
-    'correspondence': 34,
-    'link': 'conclusion.html',
-  }],
-  Idea: [{
-    'content': 'Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido' +
-      ' usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado',
-    'qualification': 3,
-    'titleId': 35,
-    'coinId': 2,
-    'userId': 1,
-  }, {
-    'content': 'Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido' +
-      ' usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado',
-    'qualification': 2,
-    'titleId': 35,
-    'coinId': 3,
-    'userId': 2,
-  }, {
-    'content': 'Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido' +
-      ' usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado',
-    'qualification': 1,
-    'titleId': 35,
-    'coinId': 1,
-    'userId': 3,
-  }],
+  Title: [
+    {
+      'name': 'Detalle del proyecto ',
+    }, {
+      'name': 'Introducción',
+      'correspondence': 1,
+      'link': 'introduccion.html',
+    }, {
+      'name': 'Detalles de la tecnología',
+      'correspondence': 1,
+      'link': 'detallestecnologia.html',
+    }, {
+      'name': 'Road-map y producto mínimo viable',
+      'correspondence': 1,
+      'link': 'road-mapproductominimoviable.html',
+    }, {
+      'name': 'Contrapartes en la tecnología centralizada',
+      'correspondence': 1,
+      'link': 'contrapartestecnologiacentralizada.html',
+    }, {
+      'name': 'Necesidad de ser descentralizado',
+      'correspondence': 1,
+      'link': 'necesidadserdescentralizado.html',
+    }, {
+      'name': 'Necesidad',
+      'correspondence': 1,
+      'link': 'necesidad.html',
+    }, {
+      'name': 'Nicho de mercado',
+      'correspondence': 1,
+      'link': 'nichomercado.html',
+    }, {
+      'name': 'Diferencia competitiva',
+      'correspondence': 1,
+      'link': 'diferenciacompetitiva.html',
+    }, {
+      'name': 'Consideraciones',
+      'correspondence': 1,
+      'link': 'consideraciones1.html',
+    }, {
+      'name': 'Marketing',
+    }, {
+      'name': 'Calidad del equipo encargado',
+      'correspondence': 11,
+      'link': 'calidadequipoencargado.html',
+    }, {
+      'name': 'Medios de prensa',
+      'correspondence': 11,
+      'link': 'mediosprensa.html',
+    }, {
+      'name': 'Asociaciones',
+      'correspondence': 11,
+      'link': 'asociaciones.html',
+    }, {
+      'name': 'Calidad de imagen',
+      'correspondence': 11,
+      'link': 'calidadimagen.html',
+    }, {
+      'name': 'Consideraciones',
+      'correspondence': 11,
+      'link': 'consideraciones11.html',
+    }, {
+      'name': 'Redes sociales',
+    }, {
+      'name': 'Crecimiento',
+      'correspondence': 17,
+      'link': 'crecimiento.html',
+    }, {
+      'name': 'Reacción de seguidores',
+      'correspondence': 17,
+      'link': 'reaccionseguidores.html',
+    }, {
+      'name': 'Implicación',
+      'correspondence': 17,
+      'link': 'implicacion.html',
+    }, {
+      'name': 'Consideraciones',
+      'correspondence': 17,
+      'link': 'consideraciones17.html',
+    }, {
+      'name': 'Oferta Vs Demanda',
+    }, {
+      'name': 'Minería de datos',
+      'correspondence': 22,
+      'link': 'mineriadatos.html',
+    }, {
+      'name': 'Política inflacionaria',
+      'correspondence': 22,
+      'link': 'politicainflacionaria.html',
+    }, {
+      'name': 'Uso de tokens e indicador NVT',
+      'correspondence': 22,
+      'link': 'usotokensindicadornvt.html',
+    }, {
+      'name': 'Estimación del tamaño de mercado',
+      'correspondence': 22,
+      'link': 'estimaciontamanomercado.html',
+    }, {
+      'name': 'Comparación entre oferta y demanda',
+      'correspondence': 22,
+      'link': 'comparacionofertademanda.html',
+    }, {
+      'name': 'Consideraciones',
+      'correspondence': 22,
+      'link': 'consideraciones22.html',
+    }, {
+      'name': 'Equipo',
+    }, {
+      'name': 'Directivos',
+      'correspondence': 29,
+      'link': 'directivos.html',
+    }, {
+      'name': 'Asesores',
+      'correspondence': 29,
+      'link': 'asesores.html',
+    }, {
+      'name': 'Frecuencia de actualizaciones en Github',
+      'correspondence': 29,
+      'link': 'recuenciaactualizacionesgithub.html',
+    }, {
+      'name': 'Consideraciones',
+      'correspondence': 29,
+      'link': 'consideraciones29.html',
+    }, {
+      'name': 'Conclusiones',
+    }, {
+      'name': 'Conclusion',
+      'correspondence': 34,
+      'link': 'conclusion.html',
+    },
+  ],
+  Idea: [
+    {
+      'content': 'Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido' +
+        ' usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado',
+      'qualification': 3,
+      'titleId': 35,
+      'coinId': 2,
+      'userId': 1,
+    }, {
+      'content': 'Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido' +
+        ' usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado',
+      'qualification': 2,
+      'titleId': 35,
+      'coinId': 3,
+      'userId': 2,
+    }, {
+      'content': 'Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido' +
+        ' usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado',
+      'qualification': 1,
+      'titleId': 35,
+      'coinId': 1,
+      'userId': 3,
+    },
+  ],
   ChatRoom: [],
   Chat: [],
   News: [
@@ -537,239 +597,243 @@ module.exports = {
       'expiration': '2018-12-31',
     },
   ],
-  Point: [{
-    'name': 'entrada',
-  }, {
-    'name': 'salida',
-  }, {
-    'name': 'stoploss',
-  }],
-  Position: [{
-    'value': 8830,
-    'capitalPercentage': 15,
-    'signalId': 1,
-    'pointId': 1,
-  }, {
-    'value': 8324,
-    'capitalPercentage': 40,
-    'signalId': 1,
-    'pointId': 2,
-  }, {
-    'value': 8322,
-    'capitalPercentage': 20,
-    'signalId': 1,
-    'pointId': 3,
-  }, {
-    'value': 8830,
-    'capitalPercentage': 15,
-    'signalId': 2,
-    'pointId': 1,
-  }, {
-    'value': 8324,
-    'capitalPercentage': 40,
-    'signalId': 2,
-    'pointId': 2,
-  }, {
-    'value': 8322,
-    'capitalPercentage': 20,
-    'signalId': 2,
-    'pointId': 3,
-  }, {
-    'value': 8830,
-    'capitalPercentage': 15,
-    'signalId': 3,
-    'pointId': 1,
-  }, {
-    'value': 8324,
-    'capitalPercentage': 40,
-    'signalId': 3,
-    'pointId': 2,
-  }, {
-    'value': 8322,
-    'capitalPercentage': 20,
-    'signalId': 3,
-    'pointId': 3,
-  }, {
-    'value': 8830,
-    'capitalPercentage': 15,
-    'signalId': 4,
-    'pointId': 1,
-  }, {
-    'value': 8324,
-    'capitalPercentage': 40,
-    'signalId': 4,
-    'pointId': 2,
-  }, {
-    'value': 8322,
-    'capitalPercentage': 20,
-    'signalId': 4,
-    'pointId': 3,
-  }, {
-    'value': 8830,
-    'capitalPercentage': 15,
-    'signalId': 5,
-    'pointId': 1,
-  }, {
-    'value': 8324,
-    'capitalPercentage': 40,
-    'signalId': 5,
-    'pointId': 2,
-  }, {
-    'value': 8322,
-    'capitalPercentage': 20,
-    'signalId': 5,
-    'pointId': 3,
-  }, {
-    'value': 8830,
-    'capitalPercentage': 15,
-    'signalId': 6,
-    'pointId': 1,
-  }, {
-    'value': 8324,
-    'capitalPercentage': 40,
-    'signalId': 6,
-    'pointId': 2,
-  }, {
-    'value': 8322,
-    'capitalPercentage': 20,
-    'signalId': 6,
-    'pointId': 3,
-  }, {
-    'value': 8830,
-    'capitalPercentage': 15,
-    'signalId': 7,
-    'pointId': 1,
-  }, {
-    'value': 8324,
-    'capitalPercentage': 40,
-    'signalId': 7,
-    'pointId': 2,
-  }, {
-    'value': 8322,
-    'capitalPercentage': 20,
-    'signalId': 7,
-    'pointId': 3,
-  }, {
-    'value': 8830,
-    'capitalPercentage': 15,
-    'signalId': 8,
-    'pointId': 1,
-  }, {
-    'value': 8324,
-    'capitalPercentage': 40,
-    'signalId': 8,
-    'pointId': 2,
-  }, {
-    'value': 8322,
-    'capitalPercentage': 20,
-    'signalId': 8,
-    'pointId': 3,
-  }, {
-    'value': 8830,
-    'capitalPercentage': 15,
-    'signalId': 9,
-    'pointId': 1,
-  }, {
-    'value': 8324,
-    'capitalPercentage': 40,
-    'signalId': 9,
-    'pointId': 2,
-  }, {
-    'value': 8322,
-    'capitalPercentage': 20,
-    'signalId': 9,
-    'pointId': 3,
-  }, {
-    'value': 8830,
-    'capitalPercentage': 15,
-    'signalId': 10,
-    'pointId': 1,
-  }, {
-    'value': 8324,
-    'capitalPercentage': 40,
-    'signalId': 10,
-    'pointId': 2,
-  }, {
-    'value': 8322,
-    'capitalPercentage': 20,
-    'signalId': 10,
-    'pointId': 3,
-  }, {
-    'value': 8830,
-    'capitalPercentage': 15,
-    'signalId': 11,
-    'pointId': 1,
-  }, {
-    'value': 8324,
-    'capitalPercentage': 40,
-    'signalId': 11,
-    'pointId': 2,
-  }, {
-    'value': 8322,
-    'capitalPercentage': 20,
-    'signalId': 11,
-    'pointId': 3,
-  }, {
-    'value': 8830,
-    'capitalPercentage': 15,
-    'signalId': 12,
-    'pointId': 1,
-  }, {
-    'value': 8324,
-    'capitalPercentage': 40,
-    'signalId': 12,
-    'pointId': 2,
-  }, {
-    'value': 8322,
-    'capitalPercentage': 20,
-    'signalId': 12,
-    'pointId': 3,
-  }, {
-    'value': 8830,
-    'capitalPercentage': 15,
-    'signalId': 13,
-    'pointId': 1,
-  }, {
-    'value': 8324,
-    'capitalPercentage': 40,
-    'signalId': 13,
-    'pointId': 2,
-  }, {
-    'value': 8322,
-    'capitalPercentage': 20,
-    'signalId': 13,
-    'pointId': 3,
-  }, {
-    'value': 8830,
-    'capitalPercentage': 15,
-    'signalId': 14,
-    'pointId': 1,
-  }, {
-    'value': 8324,
-    'capitalPercentage': 40,
-    'signalId': 14,
-    'pointId': 2,
-  }, {
-    'value': 8322,
-    'capitalPercentage': 20,
-    'signalId': 14,
-    'pointId': 3,
-  }, {
-    'value': 8830,
-    'capitalPercentage': 15,
-    'signalId': 15,
-    'pointId': 1,
-  }, {
-    'value': 8324,
-    'capitalPercentage': 40,
-    'signalId': 15,
-    'pointId': 2,
-  }, {
-    'value': 8322,
-    'capitalPercentage': 20,
-    'signalId': 15,
-    'pointId': 3,
-  }],
+  Point: [
+    {
+      'name': 'entrada',
+    }, {
+      'name': 'salida',
+    }, {
+      'name': 'stoploss',
+    },
+  ],
+  Position: [
+    {
+      'value': 8830,
+      'capitalPercentage': 15,
+      'signalId': 1,
+      'pointId': 1,
+    }, {
+      'value': 8324,
+      'capitalPercentage': 40,
+      'signalId': 1,
+      'pointId': 2,
+    }, {
+      'value': 8322,
+      'capitalPercentage': 20,
+      'signalId': 1,
+      'pointId': 3,
+    }, {
+      'value': 8830,
+      'capitalPercentage': 15,
+      'signalId': 2,
+      'pointId': 1,
+    }, {
+      'value': 8324,
+      'capitalPercentage': 40,
+      'signalId': 2,
+      'pointId': 2,
+    }, {
+      'value': 8322,
+      'capitalPercentage': 20,
+      'signalId': 2,
+      'pointId': 3,
+    }, {
+      'value': 8830,
+      'capitalPercentage': 15,
+      'signalId': 3,
+      'pointId': 1,
+    }, {
+      'value': 8324,
+      'capitalPercentage': 40,
+      'signalId': 3,
+      'pointId': 2,
+    }, {
+      'value': 8322,
+      'capitalPercentage': 20,
+      'signalId': 3,
+      'pointId': 3,
+    }, {
+      'value': 8830,
+      'capitalPercentage': 15,
+      'signalId': 4,
+      'pointId': 1,
+    }, {
+      'value': 8324,
+      'capitalPercentage': 40,
+      'signalId': 4,
+      'pointId': 2,
+    }, {
+      'value': 8322,
+      'capitalPercentage': 20,
+      'signalId': 4,
+      'pointId': 3,
+    }, {
+      'value': 8830,
+      'capitalPercentage': 15,
+      'signalId': 5,
+      'pointId': 1,
+    }, {
+      'value': 8324,
+      'capitalPercentage': 40,
+      'signalId': 5,
+      'pointId': 2,
+    }, {
+      'value': 8322,
+      'capitalPercentage': 20,
+      'signalId': 5,
+      'pointId': 3,
+    }, {
+      'value': 8830,
+      'capitalPercentage': 15,
+      'signalId': 6,
+      'pointId': 1,
+    }, {
+      'value': 8324,
+      'capitalPercentage': 40,
+      'signalId': 6,
+      'pointId': 2,
+    }, {
+      'value': 8322,
+      'capitalPercentage': 20,
+      'signalId': 6,
+      'pointId': 3,
+    }, {
+      'value': 8830,
+      'capitalPercentage': 15,
+      'signalId': 7,
+      'pointId': 1,
+    }, {
+      'value': 8324,
+      'capitalPercentage': 40,
+      'signalId': 7,
+      'pointId': 2,
+    }, {
+      'value': 8322,
+      'capitalPercentage': 20,
+      'signalId': 7,
+      'pointId': 3,
+    }, {
+      'value': 8830,
+      'capitalPercentage': 15,
+      'signalId': 8,
+      'pointId': 1,
+    }, {
+      'value': 8324,
+      'capitalPercentage': 40,
+      'signalId': 8,
+      'pointId': 2,
+    }, {
+      'value': 8322,
+      'capitalPercentage': 20,
+      'signalId': 8,
+      'pointId': 3,
+    }, {
+      'value': 8830,
+      'capitalPercentage': 15,
+      'signalId': 9,
+      'pointId': 1,
+    }, {
+      'value': 8324,
+      'capitalPercentage': 40,
+      'signalId': 9,
+      'pointId': 2,
+    }, {
+      'value': 8322,
+      'capitalPercentage': 20,
+      'signalId': 9,
+      'pointId': 3,
+    }, {
+      'value': 8830,
+      'capitalPercentage': 15,
+      'signalId': 10,
+      'pointId': 1,
+    }, {
+      'value': 8324,
+      'capitalPercentage': 40,
+      'signalId': 10,
+      'pointId': 2,
+    }, {
+      'value': 8322,
+      'capitalPercentage': 20,
+      'signalId': 10,
+      'pointId': 3,
+    }, {
+      'value': 8830,
+      'capitalPercentage': 15,
+      'signalId': 11,
+      'pointId': 1,
+    }, {
+      'value': 8324,
+      'capitalPercentage': 40,
+      'signalId': 11,
+      'pointId': 2,
+    }, {
+      'value': 8322,
+      'capitalPercentage': 20,
+      'signalId': 11,
+      'pointId': 3,
+    }, {
+      'value': 8830,
+      'capitalPercentage': 15,
+      'signalId': 12,
+      'pointId': 1,
+    }, {
+      'value': 8324,
+      'capitalPercentage': 40,
+      'signalId': 12,
+      'pointId': 2,
+    }, {
+      'value': 8322,
+      'capitalPercentage': 20,
+      'signalId': 12,
+      'pointId': 3,
+    }, {
+      'value': 8830,
+      'capitalPercentage': 15,
+      'signalId': 13,
+      'pointId': 1,
+    }, {
+      'value': 8324,
+      'capitalPercentage': 40,
+      'signalId': 13,
+      'pointId': 2,
+    }, {
+      'value': 8322,
+      'capitalPercentage': 20,
+      'signalId': 13,
+      'pointId': 3,
+    }, {
+      'value': 8830,
+      'capitalPercentage': 15,
+      'signalId': 14,
+      'pointId': 1,
+    }, {
+      'value': 8324,
+      'capitalPercentage': 40,
+      'signalId': 14,
+      'pointId': 2,
+    }, {
+      'value': 8322,
+      'capitalPercentage': 20,
+      'signalId': 14,
+      'pointId': 3,
+    }, {
+      'value': 8830,
+      'capitalPercentage': 15,
+      'signalId': 15,
+      'pointId': 1,
+    }, {
+      'value': 8324,
+      'capitalPercentage': 40,
+      'signalId': 15,
+      'pointId': 2,
+    }, {
+      'value': 8322,
+      'capitalPercentage': 20,
+      'signalId': 15,
+      'pointId': 3,
+    },
+  ],
   Transaction: [],
   Request: [],
   Complaint: [],

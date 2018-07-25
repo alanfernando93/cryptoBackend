@@ -61,11 +61,9 @@
   },
   "validations": [],
   "relations": {
-    "User": {
+    "user": {
       "type": "hasMany",
-      "model": "Usuario",
-      "foreignKey": "userId",
-      "through": "Comment"
+      "model": "Usuario"
     }
   },
   "acls": [],
