@@ -14,7 +14,13 @@
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "project": {
+      "type": "hasMany",
+      "model": "Project",
+      "foreignKey": "marketId"
+    }
+  },
   "acls": [],
   "methods": {}
 }

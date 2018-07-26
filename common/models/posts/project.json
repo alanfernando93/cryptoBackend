@@ -13,9 +13,18 @@
   "properties": {},
   "validations": [],
   "relations": {
+    "user": {
+      "type": "belongsTo",
+      "model": "User"
+    },
     "market": {
       "type": "belongsTo",
       "model": "Market"
+    },
+    "ideas": {
+      "type": "hasMany",
+      "model": "Idea",
+      "foreignKey": "projectId"
     }
   },
   "acls": [],

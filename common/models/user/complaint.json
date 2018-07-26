@@ -22,6 +22,11 @@
   },
   "validations": [],
   "relations": {
+    "user": {
+      "type": "belongsTo",
+      "model": "Usuario",
+      "foreignKey": ""
+    },
     "news": {
       "type": "belongsTo",
       "polymorphic": {
@@ -30,6 +35,13 @@
       }
     },
     "signal": {
+      "type": "belongsTo",
+      "polymorphic": {
+        "foreignKey": "modelId",
+        "discriminator": "modelName"
+      }
+    },
+    "advisory": {
       "type": "belongsTo",
       "polymorphic": {
         "foreignKey": "modelId",

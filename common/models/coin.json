@@ -23,7 +23,28 @@
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "ideas": {
+      "type": "hasMany",
+      "model": "Idea",
+      "foreignKey": "coinId"
+    },
+    "news": {
+      "type": "hasMany",
+      "model": "News",
+      "foreignKey": "coinId"
+    },
+    "signals": {
+      "type": "hasMany",
+      "model": "Signal",
+      "foreignKey": "coinId"
+    },
+    "advisory": {
+      "type": "hasMany",
+      "model": "Advisory",
+      "foreignKey": "coinId"
+    }
+  },
   "acls": [],
   "methods": {}
 }

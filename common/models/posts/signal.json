@@ -62,8 +62,13 @@
   "validations": [],
   "relations": {
     "user": {
-      "type": "hasMany",
+      "type": "belongsTo",
       "model": "Usuario",
+      "foreignKey": ""
+    },
+    "coin": {
+      "type": "belongsTo",
+      "model": "Coin",
       "foreignKey": ""
     },
     "comments": {
@@ -72,7 +77,15 @@
       "polymorphic": {
         "foreignKey": "modelId",
         "discriminator": "modelName"
-       } 
+      }
+    },
+    "complaint": {
+      "type": "hasMany",
+      "model": "Complaint",
+      "polymorphic": {
+        "foreignKey": "modelId",
+        "discriminator": "modelName"
+      }
     }
   },
   "acls": [],

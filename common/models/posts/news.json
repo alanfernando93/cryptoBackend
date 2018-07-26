@@ -29,13 +29,26 @@
       "model": "Usuario",
       "foreignKey": ""
     },
+    "coin": {
+      "type": "belongsTo",
+      "model": "Coin",
+      "foreignKey": ""
+    },
     "comments": {
       "type": "hasMany",
       "model": "Comment",
       "polymorphic": {
         "foreignKey": "modelId",
         "discriminator": "modelName"
-       } 
+      }
+    },
+    "complaint": {
+      "type": "hasMany",
+      "model": "Complaint",
+      "polymorphic": {
+        "foreignKey": "modelId",
+        "discriminator": "modelName"
+      }
     }
   },
   "acls": [],

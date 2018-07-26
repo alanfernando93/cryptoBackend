@@ -43,6 +43,13 @@
         "foreignKey": "modelId",
         "discriminator": "modelName"
       }
+    },
+    "advisory": {
+      "type": "belongsTo",
+      "polymorphic": {
+        "foreignKey": "modelId",
+        "discriminator": "modelName"
+      }
     }
   },
   "acls": [],

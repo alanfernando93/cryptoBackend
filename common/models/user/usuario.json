@@ -58,21 +58,45 @@
     "signals": {
       "type": "hasMany",
       "model": "Signal",
-      "foreignKey": "userId",
-      "through": "Comment",
-      "polymorphic": {
-        "foreignKey": "modelId",
-        "discriminator": "modelName"
-      }
+      "foreignKey": "userId"
     },
     "news": {
       "type": "hasMany",
       "model": "News",
-      "foreignKey": "userId",
-      "through": "Comment",
-      "polymorphic": {
-        "foreignKey": "modelId",
-        "discriminator": "modelName"
+      "foreignKey": "userId"
+    },
+    "advisory": {
+      "type": "hasMany",
+      "model": "Advisory",
+      "foreignKey": "userId"
+    },
+    "comments": {
+      "type": "hasMany",
+      "model": "Comment",
+      "foreignKey": "userId"
+    },
+    "complaints": {
+      "type": "hasMany",
+      "model": "Complaint",
+      "foreignKey": "userId"
+    },
+    "answers": {
+      "type": "hasMany",
+      "model": "Answer",
+      "foreignKey": "userId"
+    },
+    "ideas": {
+      "type": "hasMany",
+      "model": "Idea",
+      "foreignKey": "userId"
+    },
+    "followers": {
+      "type": "embedsMany",
+      "model": "Follow",
+      "property": "followers",
+      "options": {
+        "validate": true,
+        "forceId": false
       }
     }
   },
@@ -89,17 +113,6 @@
       "principalId": "admin",
       "permission": "ALLOW",
       "property": "*"
-    },
-    {
-      "accessType": "EXECUTE",
-      "principalType": "ROLE",
-      "principalId": "$owner",
-      "permission": "ALLOW",
-      "property": [
-        "upload",
-        "verPagaSeñal",
-        "updateInfo"
-      ]
     },
     {
       "accessType": "READ",
