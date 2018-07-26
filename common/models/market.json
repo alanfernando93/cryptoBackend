@@ -15,6 +15,10 @@
   },
   "validations": [],
   "relations": {
+    "user": {
+      "type": "belongsTo",
+      "model": "Usuario"
+    },
     "project": {
       "type": "hasMany",
       "model": "Project",

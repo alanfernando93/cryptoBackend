@@ -91,13 +91,9 @@
       "foreignKey": "userId"
     },
     "followers": {
-      "type": "embedsMany",
+      "type": "hasMany",
       "model": "Follow",
-      "property": "followers",
-      "options": {
-        "validate": true,
-        "forceId": false
-      }
+      "foreignKey": "userId"
     }
   },
   "acls": [

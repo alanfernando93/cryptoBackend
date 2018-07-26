@@ -21,6 +21,10 @@
   },
   "validations": [],
   "relations": {
+    "user": {
+      "type": "belongsTo",
+      "model": "Usuario"
+    },
     "ideas": {
       "type": "hasMany",
       "model": "Idea",
