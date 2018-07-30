@@ -1,5 +1,5 @@
 {
-  "name": "Position",
+  "name": "position",
   "base": "PersistedModel",
   "idInjection": true,
   "strict": false,

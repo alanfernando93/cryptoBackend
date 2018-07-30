@@ -1,5 +1,5 @@
 {
-  "name": "News",
+  "name": "news",
   "base": "PersistedModel",
   "idInjection": false,
   "strict": false,
@@ -26,17 +26,17 @@
   "relations": {
     "user": {
       "type": "belongsTo",
-      "model": "Usuario",
+      "model": "user",
       "foreignKey": ""
     },
     "coin": {
       "type": "belongsTo",
-      "model": "Coin",
+      "model": "coin",
       "foreignKey": ""
     },
     "comments": {
       "type": "hasMany",
-      "model": "Comment",
+      "model": "comment",
       "polymorphic": {
         "foreignKey": "modelId",
         "discriminator": "modelName"
@@ -44,7 +44,7 @@
     },
     "complaint": {
       "type": "hasMany",
-      "model": "Complaint",
+      "model": "complaint",
       "polymorphic": {
         "foreignKey": "modelId",
         "discriminator": "modelName"

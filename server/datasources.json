@@ -28,5 +28,18 @@
         }
       }
     ]
+  },
+  "storage": {
+    "name": "storage",
+    "connector": "loopback-component-storage",
+    "provider": "filesystem",
+    "root": "./storage",
+    "allowedContentTypes": [
+      "image/jpg",
+      "image/jpeg",
+      "image/png",
+      "text/plain",
+      "text/html"
+    ]
   }
 }

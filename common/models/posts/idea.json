@@ -1,5 +1,5 @@
 {
-  "name": "Idea",
+  "name": "idea",
   "base": "PersistedModel",
   "idInjection": true,
   "strict": false,
@@ -18,20 +18,20 @@
   "relations": {
     "user": {
       "type": "belongsTo",
-      "model": "Usuario",
+      "model": "user",
       "foreignKey": ""
     },
     "coin": {
       "type": "belongsTo",
-      "model": "Coin"
+      "model": "coin"
     },
     "title": {
       "type": "belongsTo",
-      "model": "Title"
+      "model": "title"
     },
     "project": {
       "type": "belongsTo",
-      "model": "Project"
+      "model": "project"
     }
   },
   "acls": [],

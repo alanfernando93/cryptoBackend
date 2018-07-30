@@ -1,5 +1,5 @@
 {
-  "name": "Complaint",
+  "name": "complaint",
   "base": "PersistedModel",
   "idInjection": true,
   "strict": false,
@@ -24,7 +24,7 @@
   "relations": {
     "user": {
       "type": "belongsTo",
-      "model": "Usuario",
+      "model": "user",
       "foreignKey": ""
     },
     "news": {

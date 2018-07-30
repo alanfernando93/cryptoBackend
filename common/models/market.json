@@ -1,5 +1,5 @@
 {
-  "name": "Market",
+  "name": "market",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
@@ -17,11 +17,11 @@
   "relations": {
     "user": {
       "type": "belongsTo",
-      "model": "Usuario"
+      "model": "user"
     },
     "project": {
       "type": "hasMany",
-      "model": "Project",
+      "model": "project",
       "foreignKey": "marketId"
     }
   },

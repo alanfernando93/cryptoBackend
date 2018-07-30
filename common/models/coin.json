@@ -1,5 +1,5 @@
 {
-  "name": "Coin",
+  "name": "coin",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
@@ -26,26 +26,26 @@
   "relations": {
     "user": {
       "type": "belongsTo",
-      "model": "Usuario"
+      "model": "user"
     },
     "ideas": {
       "type": "hasMany",
-      "model": "Idea",
+      "model": "idea",
       "foreignKey": "coinId"
     },
     "news": {
       "type": "hasMany",
-      "model": "News",
+      "model": "new",
       "foreignKey": "coinId"
     },
     "signals": {
       "type": "hasMany",
-      "model": "Signal",
+      "model": "signal",
       "foreignKey": "coinId"
     },
     "advisory": {
       "type": "hasMany",
-      "model": "Advisory",
+      "model": "advisory",
       "foreignKey": "coinId"
     }
   },

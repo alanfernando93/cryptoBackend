@@ -1,5 +1,5 @@
 {
-  "name": "Point",
+  "name": "point",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
@@ -17,7 +17,7 @@
   "relations": {
     "position": {
       "type": "hasMany",
-      "model": "Position"
+      "model": "position"
     }
   },
   "acls": [],

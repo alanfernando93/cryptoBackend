@@ -1,5 +1,5 @@
 {
-  "name": "Answer",
+  "name": "answer",
   "base": "PersistedModel",
   "idInjection": true,
   "strict": false,
@@ -21,11 +21,11 @@
   "relations": {
     "user": {
       "type": "belongsTo",
-      "model": "Usuario"
+      "model": "user"
     },
     "comment": {
       "type": "belongsTo",
-      "model": "Comment"
+      "model": "comment"
     }
   },
   "acls": [],

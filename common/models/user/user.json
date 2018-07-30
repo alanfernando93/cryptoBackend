@@ -1,5 +1,5 @@
 {
-  "name": "Usuario",
+  "name": "user",
   "base": "User",
   "idInjection": true,
   "options": {
@@ -57,42 +57,52 @@
   "relations": {
     "signals": {
       "type": "hasMany",
-      "model": "Signal",
+      "model": "signal",
       "foreignKey": "userId"
     },
     "news": {
       "type": "hasMany",
-      "model": "News",
+      "model": "news",
       "foreignKey": "userId"
     },
     "advisory": {
       "type": "hasMany",
-      "model": "Advisory",
+      "model": "advisory",
       "foreignKey": "userId"
     },
     "comments": {
       "type": "hasMany",
-      "model": "Comment",
+      "model": "comment",
       "foreignKey": "userId"
     },
     "complaints": {
       "type": "hasMany",
-      "model": "Complaint",
+      "model": "complaint",
       "foreignKey": "userId"
     },
     "answers": {
       "type": "hasMany",
-      "model": "Answer",
+      "model": "answer",
       "foreignKey": "userId"
     },
     "ideas": {
       "type": "hasMany",
-      "model": "Idea",
+      "model": "idea",
       "foreignKey": "userId"
     },
     "followers": {
       "type": "hasMany",
-      "model": "Follow",
+      "model": "follow",
+      "foreignKey": "userId"
+    },
+    "identities": {
+      "type": "hasMany",
+      "model": "userIdentity",
+      "foreignKey": "userId"
+    },
+    "credentials": {
+      "type": "hasMany",
+      "model": "userCredential",
       "foreignKey": "userId"
     }
   },

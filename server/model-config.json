@@ -8,7 +8,8 @@
       "../common/models/comment",
       "../common/models/posts",
       "../common/models/user",
-      "./models"
+      "./models",
+      "./node_modules/loopback-component-passport/lib/models"
     ],
     "mixins": [
       "loopback/common/mixins",
@@ -16,10 +17,6 @@
       "../common/mixins",
       "./mixins"
     ]
-  },
-  "User": {
-    "dataSource": "db",
-    "public": false
   },
   "AccessToken": {
     "dataSource": "db",
@@ -40,84 +37,96 @@
     "dataSource": "db",
     "public": false
   },
-  "Usuario": {
+  "userIdentity": {
     "dataSource": "db",
     "public": true
   },
-  "News": {
+  "userCredential": {
     "dataSource": "db",
     "public": true
   },
-  "Coin": {
+  "user": {
     "dataSource": "db",
     "public": true
   },
-  "Market": {
+  "news": {
     "dataSource": "db",
     "public": true
   },
-  "Signal": {
+  "coin": {
     "dataSource": "db",
     "public": true
   },
-  "Title": {
+  "market": {
     "dataSource": "db",
     "public": true
   },
-  "Idea": {
+  "signal": {
     "dataSource": "db",
     "public": true
   },
-  "Project": {
+  "title": {
     "dataSource": "db",
     "public": true
   },
-  "Comment": {
+  "idea": {
     "dataSource": "db",
     "public": true
   },
-  "Answer": {
+  "project": {
     "dataSource": "db",
     "public": true
   },
-  "Follow": {
+  "comment": {
     "dataSource": "db",
     "public": true
   },
-  "Chat": {
+  "answer": {
     "dataSource": "db",
     "public": true
   },
-  "Complaint": {
+  "follow": {
     "dataSource": "db",
     "public": true
   },
-  "Position": {
+  "chat": {
     "dataSource": "db",
     "public": true
   },
-  "Point": {
+  "complaint": {
     "dataSource": "db",
     "public": true
   },
-  "Request": {
+  "position": {
     "dataSource": "db",
     "public": true
   },
-  "Transaction": {
+  "point": {
     "dataSource": "db",
     "public": true
   },
-  "Offer": {
+  "request": {
     "dataSource": "db",
     "public": true
   },
-  "Advisory": {
+  "transaction": {
     "dataSource": "db",
     "public": true
   },
-  "ChatRoom": {
+  "offer": {
     "dataSource": "db",
+    "public": true
+  },
+  "advisory": {
+    "dataSource": "db",
+    "public": true
+  },
+  "chatRoom": {
+    "dataSource": "db",
+    "public": true
+  },
+  "container": {
+    "dataSource": "storage",
     "public": true
   }
 }

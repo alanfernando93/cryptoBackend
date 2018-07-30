@@ -1,5 +1,5 @@
 {
-  "name": "Comment",
+  "name": "comment",
   "base": "PersistedModel",
   "idInjection": true,
   "strict": false,
@@ -24,11 +24,11 @@
   "relations": {
     "user": {
       "type": "belongsTo",
-      "model": "Usuario"
+      "model": "user"
     },
     "answer": {
       "type": "hasMany",
-      "model": "Answer"
+      "model": "answer"
     },
     "news": {
       "type": "belongsTo",

@@ -1,5 +1,5 @@
 {
-  "name": "Transaction",
+  "name": "transaction",
   "base": "PersistedModel",
   "idInjection": true,
   "strict": false,

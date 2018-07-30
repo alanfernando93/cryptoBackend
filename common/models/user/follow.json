@@ -1,5 +1,5 @@
 {
-  "name": "Follow",
+  "name": "follow",
   "base": "PersistedModel",
   "idInjection": true,
   "strict": false,
@@ -14,11 +14,11 @@
   "relations": {
     "user": {
       "type": "belongsTo",
-      "model": "Usuario"
+      "model": "user"
     },
     "follower": {
       "type": "belongsTo",
-      "model": "Usuario"
+      "model": "user"
     }
   },
   "acls": [],

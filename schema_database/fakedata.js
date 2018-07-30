@@ -19,7 +19,7 @@ module.exports = {
       roleId: 1,
     },
   ],
-  Usuario: [
+  user: [
     {
       'firstName': 'Tony',
       'lastName': 'Stark',
@@ -70,7 +70,7 @@ module.exports = {
       }],
     },
   ],
-  Coin: [
+  coin: [
     {
       'name': 'Bitcoin',
       'symbol': 'BTC',
@@ -113,11 +113,11 @@ module.exports = {
       'totalSupply': 100000000000.0,
     },
   ],
-  Advisory: [],
+  advisory: [],
   // 'disputa': [],
   // instruccion: [],
-  Offer: [],
-  Comment: [
+  offer: [],
+  comment: [
     {
       content: 'Hola, hay alguien',
       modelName: 'Signal',
@@ -144,7 +144,7 @@ module.exports = {
       userId: 2,
     },
   ],
-  Answer: [
+  answer: [
     {
       content: 'yo te estoy respondiendo',
       modelName: 'Signal',
@@ -175,9 +175,9 @@ module.exports = {
       userId: 3,
     },
   ],
-  Market: [],
-  Project: [],
-  Title: [
+  market: [],
+  project: [],
+  title: [
     {
       'name': 'Detalle del proyecto ',
     }, {
@@ -308,7 +308,7 @@ module.exports = {
       'link': 'conclusion.html',
     },
   ],
-  Idea: [
+  idea: [
     {
       'content': 'Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido' +
         ' usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado',
@@ -332,9 +332,9 @@ module.exports = {
       'userId': 3,
     },
   ],
-  ChatRoom: [],
-  Chat: [],
-  News: [
+  chatroom: [],
+  chat: [],
+  news: [
     {
       'title': 'El servicio gratuito de Google traduce instantáneamente palabras',
       'content': '<p><span class=\"st\">El servicio gratuito de Google traduce instantáneamente palabras, frases y páginas web del español a más de 100 idiomas y viceversa.</span></p>',
@@ -458,7 +458,7 @@ module.exports = {
     },
   ],
   // notification: [],
-  Follow: [
+  follow: [
     {
       'userId': 1,
       'followerId': 2,
@@ -473,7 +473,7 @@ module.exports = {
       'followerId': 1,
     },
   ],
-  Signal: [
+  signal: [
     {
       'offer': true,
       'investmentType': 'POW',
@@ -646,7 +646,7 @@ module.exports = {
       'coinId': 2,
     },
   ],
-  Point: [
+  point: [
     {
       'name': 'entrada',
     }, {
@@ -655,7 +655,7 @@ module.exports = {
       'name': 'stoploss',
     },
   ],
-  Position: [
+  position: [
     {
       'value': 8830,
       'capitalPercentage': 15,
@@ -883,8 +883,10 @@ module.exports = {
       'pointId': 3,
     },
   ],
-  Transaction: [],
-  Request: [],
-  Complaint: [],
+  transaction: [],
+  request: [],
+  complaint: [],
+  userIdentity: [],
+  userCredential: [],
 };
 

@@ -1,5 +1,5 @@
 {
-  "name": "Title",
+  "name": "title",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
@@ -23,11 +23,11 @@
   "relations": {
     "user": {
       "type": "belongsTo",
-      "model": "Usuario"
+      "model": "user"
     },
     "ideas": {
       "type": "hasMany",
-      "model": "Idea",
+      "model": "idea",
       "foreignKey": "titleId"
     }
   },

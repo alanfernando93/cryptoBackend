@@ -1,5 +1,5 @@
 {
-  "name": "Project",
+  "name": "project",
   "base": "PersistedModel",
   "idInjection": true,
   "strict": false,
@@ -15,15 +15,15 @@
   "relations": {
     "user": {
       "type": "belongsTo",
-      "model": "User"
+      "model": "user"
     },
     "market": {
       "type": "belongsTo",
-      "model": "Market"
+      "model": "market"
     },
     "ideas": {
       "type": "hasMany",
-      "model": "Idea",
+      "model": "idea",
       "foreignKey": "projectId"
     }
   },
