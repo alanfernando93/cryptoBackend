@@ -12,6 +12,7 @@
       "./node_modules/loopback-component-passport/lib/models"
     ],
     "mixins": [
+      "../node_modules/loopback-likes-mixin/dist",
       "loopback/common/mixins",
       "loopback/server/mixins",
       "../common/mixins",
@@ -39,11 +40,11 @@
   },
   "userIdentity": {
     "dataSource": "db",
-    "public": true
+    "public": false
   },
   "userCredential": {
     "dataSource": "db",
-    "public": true
+    "public": false
   },
   "user": {
     "dataSource": "db",
