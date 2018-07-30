@@ -8,7 +8,22 @@
   },
   "mixins": {
     "Timestamp": true,
-    "Posts": true
+    "Posts": true,
+    "Likes": [
+      {
+        "method": "like",
+        "endpoint": "/:id/like",
+        "likes": "likes",
+        "userModel": "user"
+      },
+      {
+        "method": "dislike",
+        "endpoint": "/:id/dislike",
+        "likes": "dislikes",
+        "userModel": "user",
+        "description": " dislikes instance for the given userId"
+      }
+    ]
   },
   "properties": {
     "title": "string",

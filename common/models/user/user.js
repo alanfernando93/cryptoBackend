@@ -24,41 +24,41 @@ module.exports = function(User) {
   //   'letra mayúscula, una letra minúscula y un símbolo especial ("@ # $%").',
   // }); // password compuesto por letras y numeros
 
-  User.observe('after save', (ctx, next) => {
-    var rol = User.app.models.Role;
-    var map = User.app.models.RoleMapping;
-    if (ctx.instance != undefined) {
-      if (ctx.instance.realm == 'normal') {
-        rol.find({where: {name: 'normal'}}, (err, rol) => {
-          if (err)
-            throw err;
-          map.upsertWithWhere({principalId: ctx.instance.id}, {
-            principalType: 'NORMAL',
-            principalId: ctx.instance.id,
-            roleId: rol[0].id,
-          }, (err, rolemapping) => {
-            if (err)
-              console.log('error asignando roles');
-            console.log(rolemapping);
-          });
-        });
-      }
-      if (ctx.instance.realm == 'premium') {
-        rol.find({where: {name: 'premium'}}, (err, rol) => {
-          if (err)
-            throw err;
-          map.upsertWithWhere({principalId: ctx.instance.id}, {
-            principalType: 'Premium',
-            principalId: ctx.instance.id,
-            roleId: rol[0].id,
-          }, (err, rolemapping) => {
-            if (err)
-              console.log('error asignando roles');
-            console.log(rolemapping);
-          });
-        });
-      }
-    }
-    next();
-  });
+  // User.observe('after save', (ctx, next) => {
+  //   var rol = User.app.models.Role;
+  //   var map = User.app.models.RoleMapping;
+  //   if (ctx.instance != undefined) {
+  //     if (ctx.instance.realm == 'normal') {
+  //       rol.find({where: {name: 'normal'}}, (err, rol) => {
+  //         if (err)
+  //           throw err;
+  //         map.upsertWithWhere({principalId: ctx.instance.id}, {
+  //           principalType: 'NORMAL',
+  //           principalId: ctx.instance.id,
+  //           roleId: rol[0].id,
+  //         }, (err, rolemapping) => {
+  //           if (err)
+  //             console.log('error asignando roles');
+  //           console.log(rolemapping);
+  //         });
+  //       });
+  //     }
+  //     if (ctx.instance.realm == 'premium') {
+  //       rol.find({where: {name: 'premium'}}, (err, rol) => {
+  //         if (err)
+  //           throw err;
+  //         map.upsertWithWhere({principalId: ctx.instance.id}, {
+  //           principalType: 'Premium',
+  //           principalId: ctx.instance.id,
+  //           roleId: rol[0].id,
+  //         }, (err, rolemapping) => {
+  //           if (err)
+  //             console.log('error asignando roles');
+  //           console.log(rolemapping);
+  //         });
+  //       });
+  //     }
+  //   }
+  //   next();
+  // });
 };
