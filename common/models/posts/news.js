@@ -1,5 +1,5 @@
 'use strict';
-var CalculatePrice = require('../../../lib/functions');
+var f = require('../../../lib/functions');
 
 module.exports = function(News) {
   // verifica si es tiene un precio por defecto
@@ -18,12 +18,11 @@ module.exports = function(News) {
     let userModel = News.app.models.user;
     return userModel.findById(userId)
       .then(usuario => {
-        return News.count({usuarioId: userId})
-          .then(val => {
-            let price = CalculatePrice(usuario.precision.valor, val);
-            // News.updateAll({id: newsId}, {precio: price, comprable: true});
-            return price;
-          });
+        return News.count({userId: userId}, (err, count)  => {
+          let price = f.CalculatePrice(usuario.precision.valor, count);
+          // News.updateAll({id: newsId}, {precio: price, comprable: true});
+          return price;
+        });
       });
   };
 };

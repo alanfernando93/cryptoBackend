@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = function(Model, options) {
+module.exports = function (Model, options) {
   Model.defineProperty('content', { type: String, dataType: 'text' });
   Model.defineProperty('blocked', { type: Boolean });
   Model.defineProperty('affordable', { type: Boolean });
@@ -9,7 +9,7 @@ module.exports = function(Model, options) {
   Model.defineProperty('expiration', { type: Date });
 
   Model.mixin("Dropbox", true);
-  
+
   Model.mixin("Likes", {
     "method": "like",
     "endpoint": "/:id/like",
@@ -44,7 +44,7 @@ module.exports = function(Model, options) {
   });
 
   // hook para quitar like si le damos dislike
-  Model.afterRemote('dislike', (ctx, noticia, next) => {
+  Model.afterRemote('dislike', (ctx, model, next) => {
     var id = ctx.req.params.id;
     var userId = ctx.req.query.userId;
     var user = ctx.result.likes.users.find(element => element == userId);
@@ -59,5 +59,15 @@ module.exports = function(Model, options) {
     ctx.result.likes.total = ctx.result.likes.users.length;
     // codigo para agrupar fama de usuario en el resultado de la peticion
     next();
+  });
+
+  Model.afterRemote('create', (ctx, user, next) => {
+    let userId = ctx.result.userId;
+    Model.app.models.user.findById(userId).then(data => {
+      data.points += 1;
+      Model.app.models.user.upsert(data).then(res => {
+        next();
+      });
+    });
   });
 };
