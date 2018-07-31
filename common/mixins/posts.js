@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = function (Model, options) {
+module.exports = function(Model, options) {
   Model.defineProperty('content', { type: String, dataType: 'text' });
   Model.defineProperty('blocked', { type: Boolean });
   Model.defineProperty('affordable', { type: Boolean });
@@ -8,29 +8,56 @@ module.exports = function (Model, options) {
   Model.defineProperty('coinType', { type: String });
   Model.defineProperty('expiration', { type: Date });
 
+  Model.mixin("Dropbox", true);
+  
   Model.mixin("Likes", {
     "method": "like",
     "endpoint": "/:id/like",
     "likes": "likes",
-    "userModel": "user"
+    "userModel": "user",
+    "description": ' likes ' + Model.definition.name + ' instance for the given userId',
   });
   Model.mixin("Likes", {
     "method": 'dislike',
     "endpoint": '/:id/dislike',
     "likes": 'dislikes',
     "userModel": 'user',
-    "description": ' dislikes instance for the given userId',
+    "description": ' dislikes ' + Model.definition.name + ' instance for the given userId',
   });
 
   // hook para quitar dislike si le damos like
   Model.afterRemote('like', (ctx, noticia, next) => {
-    console.log(ctx)
+    var id = ctx.req.params.id;
+    var userId = ctx.req.query.userId;
+    var user = ctx.result.dislikes.users.find(element => element == userId);
+    if (user) {
+      ctx.method.ctor.dislike(id, userId);
+      ctx.result.dislikes.users.splice(user, 1);
+    }
+    if (!ctx.result.likes.users.find(element => element == userId)) {
+      ctx.method.ctor.dislike(id, userId);
+      ctx.result.dislikes.users.push(userId);
+    }
+    ctx.result.dislikes.total = ctx.result.dislikes.users.length;
+    // codigo para agrupar fama de usuario en el resultado de la peticion
     next();
   });
 
   // hook para quitar like si le damos dislike
   Model.afterRemote('dislike', (ctx, noticia, next) => {
-    console.log(ctx.result)
+    var id = ctx.req.params.id;
+    var userId = ctx.req.query.userId;
+    var user = ctx.result.likes.users.find(element => element == userId);
+    if (user) {
+      ctx.method.ctor.like(id, userId);
+      ctx.result.likes.users.splice(user, 1);
+    }
+    if (!ctx.result.dislikes.users.find(element => element == userId)) {
+      ctx.method.ctor.like(id, userId);
+      ctx.result.likes.users.push(userId);
+    }
+    ctx.result.likes.total = ctx.result.likes.users.length;
+    // codigo para agrupar fama de usuario en el resultado de la peticion
     next();
   });
 };

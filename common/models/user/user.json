@@ -5,6 +5,9 @@
   "options": {
     "validateUpsert": true
   },
+  "mixins": {
+    "Dropbox": true
+  },
   "restrictResetPasswordTokenScope": true,
   "emailVerificationRequired": true,
   "properties": {
@@ -42,7 +45,8 @@
       "type": "date"
     },
     "points": {
-      "type": "number"
+      "type": "number",
+      "default": 0
     },
     "precision": {
       "type": "object",

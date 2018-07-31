@@ -14,14 +14,15 @@
         "method": "like",
         "endpoint": "/:id/like",
         "likes": "likes",
-        "userModel": "user"
+        "userModel": "user",
+        "description": " likes news instance for the given userId"
       },
       {
         "method": "dislike",
         "endpoint": "/:id/dislike",
         "likes": "dislikes",
         "userModel": "user",
-        "description": " dislikes instance for the given userId"
+        "description": " dislikes news instance for the given userId"
       }
     ]
   },
