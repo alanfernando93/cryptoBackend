@@ -343,7 +343,7 @@ module.exports = {
       'guessPrice': '<p><span class=\"st\">El servicio gratuito de Google traduce instantáneamente palabras, frases y páginas web del español a más de 100 idiomas y viceversa.</span></p>',
       'userId': 1,
       'coinId': 1,
-      'image': '1-perfil-1',
+      'image': '1-perfil-1.png',
     }, {
       'title': '¿Qué es Lorem Ipsum?',
       'content': '<h2>¿Qué es Lorem Ipsum?</h2>\n<p></p>\n<p><strong>Lorem Ipsum</strong> es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta)</p>',
@@ -352,7 +352,7 @@ module.exports = {
       'guessPrice': '<h2>¿Qué es Lorem Ipsum?</h2>\n<p></p>\n<p><strong>Lorem Ipsum</strong> es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta)</p>',
       'userId': 2,
       'coinId': 2,
-      'image': '2-perfil-2',
+      'image': '2-perfil-2.jpeg',
     }, {
       'title': '¿Qué es Lorem Ipsum?',
       'content': '<h2>¿Qué es Lorem Ipsum?</h2>\n<p></p>\n<p><strong>Lorem Ipsum</strong> es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta)</p>',
@@ -361,7 +361,7 @@ module.exports = {
       'guessPrice': '<h2>¿Qué es Lorem Ipsum?</h2>\n<p></p>\n<p><strong>Lorem Ipsum</strong> es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta)</p>',
       'userId': 3,
       'coinId': 2,
-      'image': '3-perfil-3',
+      'image': '3-perfil-3.jpeg',
     }, {
       'title': 'El servicio gratuito de Google traduce instantáneamente palabras',
       'content': '<p><span class=\"st\">El servicio gratuito de Google traduce instantáneamente palabras, frases y páginas web del español a más de 100 idiomas y viceversa.</span></p>',
@@ -370,7 +370,7 @@ module.exports = {
       'guessPrice': '<p><span class=\"st\">El servicio gratuito de Google traduce instantáneamente palabras, frases y páginas web del español a más de 100 idiomas y viceversa.</span></p>',
       'userId': 1,
       'coinId': 1,
-      'image': '1-perfil-4',
+      'image': '1-perfil-4.jpg',
     }, {
       'title': '¿Qué es Lorem Ipsum?',
       'content': '<h2>¿Qué es Lorem Ipsum?</h2>\n<p></p>\n<p><strong>Lorem Ipsum</strong> es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta)</p>',
@@ -379,7 +379,7 @@ module.exports = {
       'guessPrice': '<h2>¿Qué es Lorem Ipsum?</h2>\n<p></p>\n<p><strong>Lorem Ipsum</strong> es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta)</p>',
       'userId': 2,
       'coinId': 2,
-      'image': '2-perfil-5',
+      'image': '2-perfil-5.jpg',
     }, {
       'title': '¿Qué es Lorem Ipsum?',
       'content': '<h2>¿Qué es Lorem Ipsum?</h2>\n<p></p>\n<p><strong>Lorem Ipsum</strong> es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta)</p>',
@@ -388,7 +388,7 @@ module.exports = {
       'guessPrice': '<h2>¿Qué es Lorem Ipsum?</h2>\n<p></p>\n<p><strong>Lorem Ipsum</strong> es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta)</p>',
       'userId': 3,
       'coinId': 2,
-      'image': '3-perfil-6',
+      'image': '3-perfil-6.jpg',
     }, {
       'title': 'El servicio gratuito de Google traduce instantáneamente palabras',
       'content': '<p><span class=\"st\">El servicio gratuito de Google traduce instantáneamente palabras, frases y páginas web del español a más de 100 idiomas y viceversa.</span></p>',
@@ -397,7 +397,7 @@ module.exports = {
       'guessPrice': '<p><span class=\"st\">El servicio gratuito de Google traduce instantáneamente palabras, frases y páginas web del español a más de 100 idiomas y viceversa.</span></p>',
       'userId': 1,
       'coinId': 1,
-      'image': '1-perfil-7',
+      'image': '1-perfil-7.jpg',
     }, {
       'title': '¿Qué es Lorem Ipsum?',
       'content': '<h2>¿Qué es Lorem Ipsum?</h2>\n<p></p>\n<p><strong>Lorem Ipsum</strong> es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta)</p>',
@@ -406,7 +406,7 @@ module.exports = {
       'guessPrice': '<h2>¿Qué es Lorem Ipsum?</h2>\n<p></p>\n<p><strong>Lorem Ipsum</strong> es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta)</p>',
       'userId': 2,
       'coinId': 2,
-      'image': '2-perfil-8',
+      'image': '2-perfil-8.jpg',
     }, {
       'title': '¿Qué es Lorem Ipsum?',
       'content': '<h2>¿Qué es Lorem Ipsum?</h2>\n<p></p>\n<p><strong>Lorem Ipsum</strong> es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta)</p>',
@@ -415,7 +415,7 @@ module.exports = {
       'guessPrice': '<h2>¿Qué es Lorem Ipsum?</h2>\n<p></p>\n<p><strong>Lorem Ipsum</strong> es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta)</p>',
       'userId': 3,
       'coinId': 2,
-      'image': '3-perfil-9',
+      'image': '3-perfil-9.jpg',
     }, {
       'title': 'El servicio gratuito de Google traduce instantáneamente palabras',
       'content': '<p><span class=\"st\">El servicio gratuito de Google traduce instantáneamente palabras, frases y páginas web del español a más de 100 idiomas y viceversa.</span></p>',
@@ -424,7 +424,7 @@ module.exports = {
       'guessPrice': '<p><span class=\"st\">El servicio gratuito de Google traduce instantáneamente palabras, frases y páginas web del español a más de 100 idiomas y viceversa.</span></p>',
       'userId': 1,
       'coinId': 1,
-      'image': '1-perfil-10',
+      'image': '1-perfil-10.jpeg',
     }, {
       'title': '¿Qué es Lorem Ipsum?',
       'content': '<h2>¿Qué es Lorem Ipsum?</h2>\n<p></p>\n<p><strong>Lorem Ipsum</strong> es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta)</p>',
@@ -433,7 +433,7 @@ module.exports = {
       'guessPrice': '<h2>¿Qué es Lorem Ipsum?</h2>\n<p></p>\n<p><strong>Lorem Ipsum</strong> es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta)</p>',
       'userId': 2,
       'coinId': 2,
-      'image': '2-perfil-11',
+      'image': '2-perfil-11.jpeg',
     }, {
       'title': '¿Qué es Lorem Ipsum?',
       'content': '<h2>¿Qué es Lorem Ipsum?</h2>\n<p></p>\n<p><strong>Lorem Ipsum</strong> es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta)</p>',
@@ -442,7 +442,7 @@ module.exports = {
       'guessPrice': '<h2>¿Qué es Lorem Ipsum?</h2>\n<p></p>\n<p><strong>Lorem Ipsum</strong> es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta)</p>',
       'userId': 3,
       'coinId': 2,
-      'image': '3-perfil-12',
+      'image': '3-perfil-12.jpg',
     }, {
       'title': 'El servicio gratuito de Google traduce instantáneamente palabras',
       'content': '<p><span class=\"st\">El servicio gratuito de Google traduce instantáneamente palabras, frases y páginas web del español a más de 100 idiomas y viceversa.</span></p>',
@@ -451,7 +451,7 @@ module.exports = {
       'guessPrice': '<p><span class=\"st\">El servicio gratuito de Google traduce instantáneamente palabras, frases y páginas web del español a más de 100 idiomas y viceversa.</span></p>',
       'userId': 1,
       'coinId': 1,
-      'image': '1-perfil-13',
+      'image': '1-perfil-13.jpg',
     }, {
       'title': '¿Qué es Lorem Ipsum?',
       'content': '<h2>¿Qué es Lorem Ipsum?</h2>\n<p></p>\n<p><strong>Lorem Ipsum</strong> es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta)</p>',
@@ -460,7 +460,7 @@ module.exports = {
       'guessPrice': '<h2>¿Qué es Lorem Ipsum?</h2>\n<p></p>\n<p><strong>Lorem Ipsum</strong> es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta)</p>',
       'userId': 2,
       'coinId': 2,
-      'image': '2-perfil-14',
+      'image': '2-perfil-14.jpg',
     }, {
       'title': '¿Qué es Lorem Ipsum?',
       'content': '<h2>¿Qué es Lorem Ipsum?</h2>\n<p></p>\n<p><strong>Lorem Ipsum</strong> es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta)</p>',
@@ -469,7 +469,7 @@ module.exports = {
       'guessPrice': '<h2>¿Qué es Lorem Ipsum?</h2>\n<p></p>\n<p><strong>Lorem Ipsum</strong> es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta)</p>',
       'userId': 3,
       'coinId': 2,
-      'image': '3-perfil-15',
+      'image': '3-perfil-15.jpg',
     },
   ],
   // notification: [],
@@ -500,7 +500,7 @@ module.exports = {
       'userId': 1,
       'expiration': '2018-12-24',
       'coinId': 1,
-      'image': '1-perfil-1',
+      'image': '1-perfil-1.png',
     }, {
       'offer': false,
       'investmentType': 'POW',
@@ -512,7 +512,7 @@ module.exports = {
       'userId': 2,
       'expiration': '2018-12-31',
       'coinId': 2,
-      'image': '2-perfil-2',
+      'image': '2-perfil-2.jpeg',
     },
     {
       'offer': false,
@@ -525,7 +525,7 @@ module.exports = {
       'userId': 3,
       'expiration': '2018-12-31',
       'coinId': 2,
-      'image': '3-perfil-3',
+      'image': '3-perfil-3.jpeg',
     }, {
       'offer': true,
       'investmentType': 'POW',
@@ -537,7 +537,7 @@ module.exports = {
       'userId': 1,
       'expiration': '2018-12-24',
       'coinId': 1,
-      'image': '1-perfil-4',
+      'image': '1-perfil-4.jpg',
     }, {
       'offer': false,
       'investmentType': 'POW',
@@ -549,7 +549,7 @@ module.exports = {
       'userId': 2,
       'expiration': '2018-12-31',
       'coinId': 2,
-      'image': '2-perfil-5',
+      'image': '2-perfil-5.jpg',
     },
     {
       'offer': false,
@@ -562,7 +562,7 @@ module.exports = {
       'userId': 3,
       'expiration': '2018-12-31',
       'coinId': 2,
-      'image': '3-perfil-6',
+      'image': '3-perfil-6.jpg',
     }, {
       'offer': true,
       'investmentType': 'POW',
@@ -574,7 +574,7 @@ module.exports = {
       'userId': 1,
       'expiration': '2018-12-24',
       'coinId': 1,
-      'image': '1-perfil-7',
+      'image': '1-perfil-7.jpg',
     }, {
       'offer': false,
       'investmentType': 'POW',
@@ -586,7 +586,7 @@ module.exports = {
       'userId': 2,
       'expiration': '2018-12-31',
       'coinId': 2,
-      'image': '2-perfil-8',
+      'image': '2-perfil-8.jpg',
     },
     {
       'offer': false,
@@ -599,7 +599,7 @@ module.exports = {
       'userId': 3,
       'expiration': '2018-12-31',
       'coinId': 2,
-      'image': '3-perfil-9',
+      'image': '3-perfil-9.jpg',
     }, {
       'offer': true,
       'investmentType': 'POW',
@@ -611,7 +611,7 @@ module.exports = {
       'userId': 1,
       'expiration': '2018-12-24',
       'coinId': 1,
-      'image': '1-perfil-10',
+      'image': '1-perfil-10.jpeg',
     }, {
       'offer': false,
       'investmentType': 'POW',
@@ -623,7 +623,7 @@ module.exports = {
       'userId': 2,
       'expiration': '2018-12-31',
       'coinId': 2,
-      'image': '2-perfil-11',
+      'image': '2-perfil-11.jpeg',
     },
     {
       'offer': false,
@@ -636,7 +636,7 @@ module.exports = {
       'userId': 3,
       'expiration': '2018-12-31',
       'coinId': 2,
-      'image': '3-perfil-12',
+      'image': '3-perfil-12.jpg',
     }, {
       'offer': true,
       'investmentType': 'POW',
@@ -648,7 +648,7 @@ module.exports = {
       'userId': 1,
       'expiration': '2018-12-24',
       'coinId': 1,
-      'image': '1-perfil-13',
+      'image': '1-perfil-13.jpg',
     }, {
       'offer': false,
       'investmentType': 'POW',
@@ -660,7 +660,7 @@ module.exports = {
       'userId': 2,
       'expiration': '2018-12-31',
       'coinId': 2,
-      'image': '2-perfil-14',
+      'image': '2-perfil-14.jpg',
     },
     {
       'offer': false,
@@ -673,7 +673,7 @@ module.exports = {
       'userId': 3,
       'expiration': '2018-12-31',
       'coinId': 2,
-      'image': '3-perfil-15',
+      'image': '3-perfil-15.jpg',
     },
   ],
   point: [
