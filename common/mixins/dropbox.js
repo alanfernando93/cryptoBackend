@@ -53,7 +53,6 @@ module.exports = function(Model, options) {
     var expReg = /dropbox:["']{0,1}([^"' >]*)/g;
     ctx.result.imgsEditor = [];
     var aux;
-    console.log(ctx.result);
     var request = {path: `${modelName}/${ctx.result.image}`};
     var promise = dbx.filesGetTemporaryLink(request).then(resp => {
       ctx.result.perfilLink = resp.link;
@@ -69,75 +68,14 @@ module.exports = function(Model, options) {
       codImg.forEach((element) => {
         var nameImg = element.split(':')[1];
         ctx.result.imgsEditor.push(nameImg);
-        var x = dbx.filesGetTemporaryLink(
-          {
-            path: `${modelName}/${nameImg}`,
-          }
-        ).then(resp => {
-          aux = ctx.result[content].replace(element, resp.link);
-          ctx.result[content] = aux;
+        var x = dbx.filesGetTemporaryLink({path: `${modelName}/${nameImg}`}).then(resp => {
+          ctx.result[content] = ctx.result[content].replace(element, resp.link);
         }).catch(error => {
           console.log(error);
         });
         iterable.push(x);
       });
     });
-
-    // codImg = ctx.result.content.match(expReg);
-    // if (codImg) {
-    //   codImg.forEach((element) => {
-    //     var nameImg = element.split(':')[1];
-    //     ctx.result.imgsEditor.push(nameImg);
-    //     var x = dbx.filesGetTemporaryLink(
-    //       {
-    //         path: '/news/' + nameImg,
-    //       }
-    //     ).then(resp => {
-    //       aux = ctx.result.contenido.replace(element, resp.link);
-    //       ctx.result.contenido = aux;
-    //     }).catch(error => {
-    //       console.log(error);
-    //     });
-    //     iterable.push(x);
-    //   });
-    // }
-
-    // codImg = ctx.result.guessCoin.match(expReg);
-    // if (codImg) {
-    //   codImg.forEach((element) => {
-    //     var nameImg = element.split(':')[1];
-    //     ctx.result.imgsEditor.push(nameImg);
-    //     var x = dbx.filesGetTemporaryLink(
-    //       {
-    //         path: '/news/' + nameImg,
-    //       }
-    //     ).then(resp => {
-    //       aux = ctx.result.conj_moneda.replace(element, resp.link);
-    //       ctx.result.conjMoneda = aux;
-    //     }).catch(error => {
-    //       console.log(error);
-    //     });
-    //     iterable.push(x);
-    //   });
-    // }
-    // codImg = ctx.result.guessPrice.match(expReg);
-    // if (codImg) {
-    //   codImg.forEach((element) => {
-    //     var nameImg = element.split(':')[1];
-    //     ctx.result.imgsEditor.push(nameImg);
-    //     var x = dbx.filesGetTemporaryLink(
-    //       {
-    //         path: '/news/' + nameImg,
-    //       }
-    //     ).then(resp => {
-    //       aux = ctx.result.conj_precio.replace(element, resp.link);
-    //       ctx.result.guessPrice = aux;
-    //     }).catch(error => {
-    //       console.log(error);
-    //     });
-    //     iterable.push(x);
-    //   });
-    // }
     Promise.all(iterable).then(values => {
       next();
     });

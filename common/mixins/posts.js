@@ -1,6 +1,7 @@
 'use strict';
+var global = require('../../lib/global');
 
-module.exports = function (Model, options) {
+module.exports = (Model, options) => {
   Model.defineProperty('content', { type: String, dataType: 'text' });
   Model.defineProperty('blocked', { type: Boolean });
   Model.defineProperty('affordable', { type: Boolean });
@@ -8,21 +9,21 @@ module.exports = function (Model, options) {
   Model.defineProperty('coinType', { type: String });
   Model.defineProperty('expiration', { type: Date });
 
-  Model.mixin("Dropbox", true);
+  Model.mixin('Dropbox', true);
 
-  Model.mixin("Likes", {
-    "method": "like",
-    "endpoint": "/:id/like",
-    "likes": "likes",
-    "userModel": "user",
-    "description": ' likes ' + Model.definition.name + ' instance for the given userId',
+  Model.mixin('Likes', {
+    'method': 'like',
+    'endpoint': '/:id/like',
+    'likes': 'likes',
+    'userModel': 'user',
+    'description': `likes ${Model.definition.name} instance for the given userId`,
   });
-  Model.mixin("Likes", {
-    "method": 'dislike',
-    "endpoint": '/:id/dislike',
-    "likes": 'dislikes',
-    "userModel": 'user',
-    "description": ' dislikes ' + Model.definition.name + ' instance for the given userId',
+  Model.mixin('Likes', {
+    'method': 'dislike',
+    'endpoint': '/:id/dislike',
+    'likes': 'dislikes',
+    'userModel': 'user',
+    'description': `dislikes ${Model.definition.name} instance for the given userId`,
   });
 
   // hook para quitar dislike si le damos like
@@ -39,7 +40,7 @@ module.exports = function (Model, options) {
       ctx.result.dislikes.users.push(userId);
     }
     ctx.result.dislikes.total = ctx.result.dislikes.users.length;
-    // codigo para agrupar fama de usuario en el resultado de la peticion
+    Model.app.models.usuario.famaUser(userId, global.rpl, id, global.rpfl);
     next();
   });
 
@@ -57,7 +58,7 @@ module.exports = function (Model, options) {
       ctx.result.likes.users.push(userId);
     }
     ctx.result.likes.total = ctx.result.likes.users.length;
-    // codigo para agrupar fama de usuario en el resultado de la peticion
+    Model.app.models.usuario.famaUser(userId, global.rpl, id, global.rpfl);
     next();
   });
 

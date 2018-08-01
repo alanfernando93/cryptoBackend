@@ -24,41 +24,76 @@ module.exports = function(User) {
   //   'letra mayúscula, una letra minúscula y un símbolo especial ("@ # $%").',
   // }); // password compuesto por letras y numeros
 
-  // User.observe('after save', (ctx, next) => {
-  //   var rol = User.app.models.Role;
-  //   var map = User.app.models.RoleMapping;
-  //   if (ctx.instance != undefined) {
-  //     if (ctx.instance.realm == 'normal') {
-  //       rol.find({where: {name: 'normal'}}, (err, rol) => {
-  //         if (err)
-  //           throw err;
-  //         map.upsertWithWhere({principalId: ctx.instance.id}, {
-  //           principalType: 'NORMAL',
-  //           principalId: ctx.instance.id,
-  //           roleId: rol[0].id,
-  //         }, (err, rolemapping) => {
-  //           if (err)
-  //             console.log('error asignando roles');
-  //           console.log(rolemapping);
-  //         });
-  //       });
-  //     }
-  //     if (ctx.instance.realm == 'premium') {
-  //       rol.find({where: {name: 'premium'}}, (err, rol) => {
-  //         if (err)
-  //           throw err;
-  //         map.upsertWithWhere({principalId: ctx.instance.id}, {
-  //           principalType: 'Premium',
-  //           principalId: ctx.instance.id,
-  //           roleId: rol[0].id,
-  //         }, (err, rolemapping) => {
-  //           if (err)
-  //             console.log('error asignando roles');
-  //           console.log(rolemapping);
-  //         });
-  //       });
-  //     }
-  //   }
-  //   next();
-  // });
+  User.observe('after save', (ctx, next) => {
+    var rol = User.app.models.Role;
+    var map = User.app.models.RoleMapping;
+    if (ctx.instance != undefined) {
+      if (ctx.instance.realm == 'normal') {
+        rol.find({where: {name: 'normal'}}, (err, role) => {
+          console.log(role)
+          if (err) throw err;
+          map.upsertWithWhere({principalId: ctx.instance.id}, {
+            principalType: 'NORMAL',
+            principalId: ctx.instance.id,
+            roleId: role[0].id,
+          }, (err, rolemapping) => {
+            if (err)
+              console.log('error asignando roles');
+            console.log(rolemapping);
+          });
+        });
+      }
+      if (ctx.instance.realm == 'premium') {
+        rol.find({where: {name: 'premium'}}, (err, rol) => {
+          if (err)
+            throw err;
+          map.upsertWithWhere({principalId: ctx.instance.id}, {
+            principalType: 'Premium',
+            principalId: ctx.instance.id,
+            roleId: rol[0].id,
+          }, (err, rolemapping) => {
+            if (err)
+              console.log('error asignando roles');
+            console.log(rolemapping);
+          });
+        });
+      }
+    }
+    next();
+  });
+
+  User.famaUser = (userId, punto, coinType) => {
+    User.findById(userId)
+      .then(data => {
+        User.app.models.coin.find({
+          where: {
+            symbol: coinType,
+          },
+        }, (err, moneda) => {
+          if (data.fame == null) {
+            // @dev valor : valor que tenga la moneda
+            data.fame = [{
+              id: moneda[0].id, valor: 2, symbol: moneda[0].symbol,
+            },
+            ];
+          } else {
+            var element = data.fame.find(
+              element => element.id === moneda[0].id);
+            if (element === undefined) {
+              data.fama.push({
+                id: moneda[0].id, valor: 2, symbol: moneda[0].symbol,
+              });
+            } else {
+              // @dev valor que se autoincrementa para segun al valor de la moneda
+              data.fame[data.fame.indexOf(element)].valor += punto * 2;
+            }
+          }
+          User.updateAll({id: userId}, {
+            points: data.points + punto,
+            fame: data.fame,
+          }).then(data => {
+          });
+        });
+      });
+  };
 };
