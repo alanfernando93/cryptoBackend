@@ -4,9 +4,9 @@
     "port": 3306,
     "url": "",
     "database": "criptoanalisis",
-    "password": "1234567",
+    "password": "123",
     "name": "db",
-    "user": "test",
+    "user": "root",
     "connector": "mysql",
     "connectionLimit": 100
   },
