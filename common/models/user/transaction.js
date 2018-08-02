@@ -6,9 +6,10 @@ module.exports = (Transaction) => {
     Transaction.find({
       where: {
         and: [{
-          and:
-            [{ senderId: req.body.sender }, { recieverId: req.body.reciever }],
-        }, { activo: true }]
+          and: [{senderId: req.body.sender}, {recieverId: req.body.reciever}],
+        }, {
+          activo: true,
+        }],
       },
     }).then(transfer => {
       console.log(transfer);
@@ -32,17 +33,16 @@ module.exports = (Transaction) => {
   });
 
   Transaction.modPuntos = (userId, monto) => {
-    Transaction.app.models.usuario.findById(userId)
-      .then(data => {
-        Transaction.app.models.usuario.updateAll({ id: userId }, { puntos: data.puntos + monto })
-          .catch(err => {
-            console.log('error durante la Transaction');
-          });
-      });
+    Transaction.app.models.user.findById(userId).then(data => {
+      data.points += monto;
+      data.save();
+    }).cath(err => {
+      console.log('error durante la Transaction');
+    });
   };
 
   Transaction.makeTransaction = (sellerId, buyerId, monto, razon) => {
-    let usuario = Transaction.app.models.usuario;
+    let usuario = Transaction.app.models.user;
     return usuario.haveEnoughFounds(buyerId, monto)
       .then(result => {
         if (result) {

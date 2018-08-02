@@ -32,6 +32,8 @@ module.exports = {
         'value': 84,
         'symbol': 'BTC',
       }],
+      'image': 'ironman.jpg',
+      'realm': 'admin',
     }, {
       'firstName': 'Peter',
       'lastName': 'Parker',
@@ -44,6 +46,7 @@ module.exports = {
         'value': 100,
         'symbol': 'XRP',
       }],
+      'image': 'spiderman.jpg',
     }, {
       'firstName': 'Bruce',
       'lastName': 'Banner',
@@ -56,6 +59,7 @@ module.exports = {
         'value': 2,
         'symbol': 'ETH',
       }],
+      'image': 'hulk.jpg',
     }, {
       'firstName': 'Thor',
       'lastName': 'Skgar',
@@ -68,6 +72,7 @@ module.exports = {
         'value': 100,
         'symbol': 'BCH',
       }],
+      'image': 'thor.png',
     },
   ],
   coin: [
@@ -915,7 +920,28 @@ module.exports = {
   ],
   transaction: [],
   request: [],
-  complaint: [],
+  complaint: [{
+    'type': 'el contenido es falso',
+    'comment': '\n\nLorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la i',
+    'modelId': 5,
+    'modelName': 'news',
+    'status': true,
+    'created': '2018-07-23T22:37:45.000Z',
+    'id': 1,
+    'userId': 1,
+    'denouncedId': 2,
+  },
+  {
+    'type': 'el contenido es inapropiado',
+    'comment': 'ste tipo de noticias impulsa y ayuda a el interes de los usuarios, estimo un analisis tecnico de este tipo:',
+    'modelId': 4,
+    'modelName': 'signal',
+    'status': true,
+    'created': '2018-07-26T21:16:46.000Z',
+    'id': 2,
+    'userId': 1,
+    'denouncedId': 1,
+  }],
   userIdentity: [],
   userCredential: [],
 };

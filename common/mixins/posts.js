@@ -66,9 +66,8 @@ module.exports = (Model, options) => {
     let userId = ctx.result.userId;
     Model.app.models.user.findById(userId).then(data => {
       data.points += 1;
-      Model.app.models.user.upsert(data).then(res => {
-        next();
-      });
+      data.save();
+      next();
     });
   });
 };
