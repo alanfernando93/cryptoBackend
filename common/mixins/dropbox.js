@@ -8,7 +8,12 @@ var dbx = new Dropbox({
 });
 // dbx.setClientId('zn0kbmrq6ed8rme');
 
-module.exports = function(Model, options) {
+module.exports = (Model, options) => {
+  var contents = {
+    news: ['content', 'guessPrice', 'guessCoin'],
+    signal: ['fundamentalAnalysis', 'technicalAnalysis'],
+  };
+
   var defaultOptions = {
     maxFileSize: 10 * 1024 * 1024, // 10 MB
   };
@@ -33,7 +38,7 @@ module.exports = function(Model, options) {
     var modelName = '/' + Model.definition.name;
     var iterable = [];
     ctx.result.forEach((element) => {
-      var request = {path: `${modelName}/${element.image}`};
+      var request = { path: `${modelName}/${element.image}` };
       var promise = dbx.filesGetTemporaryLink(request).then(resp => {
         element.perfilLink = resp.link;
       }).catch(err => {
@@ -47,35 +52,36 @@ module.exports = function(Model, options) {
   });
 
   Model.afterRemote('findById', (ctx, noticia, next) => {
-    var contents = ['content', 'guessPrice', 'guessCoin'];
     var modelName = '/' + Model.definition.name;
     var iterable = [];
     var expReg = /dropbox:["']{0,1}([^"' >]*)/g;
-    ctx.result.imgsEditor = [];
-    var aux;
-    var request = {path: `${modelName}/${ctx.result.image}`};
+    var request = { path: `${modelName}/${ctx.result.image}` };
     var promise = dbx.filesGetTemporaryLink(request).then(resp => {
       ctx.result.perfilLink = resp.link;
     }).catch(error => {
       console.error(`Error: no se pudo conseguir link temporal de la imagen ${modelName}/${ctx.result.image}`);
     });
     iterable.push(promise);
-    
+
     let codImg;
-    contents.forEach(content => {
-      codImg = ctx.result[content].match(expReg);
-      if (!codImg) return;
-      codImg.forEach((element) => {
-        var nameImg = element.split(':')[1];
-        ctx.result.imgsEditor.push(nameImg);
-        var x = dbx.filesGetTemporaryLink({path: `${modelName}/${nameImg}`}).then(resp => {
-          ctx.result[content] = ctx.result[content].replace(element, resp.link);
-        }).catch(error => {
-          console.log(error);
+    if (Model.definition.name !== 'user') {
+      ctx.result.imgsEditor = [];
+      contents[Model.definition.name].forEach(content => {
+        codImg = ctx.result[content].match(expReg);
+        console.log(codImg);
+        if (!codImg) return;
+        codImg.forEach((element) => {
+          var nameImg = element.split(':')[1];
+          ctx.result.imgsEditor.push(nameImg);
+          var x = dbx.filesGetTemporaryLink({ path: `${modelName}/${nameImg}` }).then(resp => {
+            ctx.result[content] = ctx.result[content].replace(element, resp.link);
+          }).catch(error => {
+            console.log(error);
+          });
+          iterable.push(x);
         });
-        iterable.push(x);
       });
-    });
+    }
     Promise.all(iterable).then(values => {
       next();
     });
