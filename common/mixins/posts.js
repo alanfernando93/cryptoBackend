@@ -2,13 +2,26 @@
 var global = require('../../lib/global');
 
 module.exports = (Model, options) => {
-  Model.defineProperty('content', { type: String, dataType: 'text' });
-  Model.defineProperty('blocked', { type: Boolean });
-  Model.defineProperty('affordable', { type: Boolean });
-  Model.defineProperty('price', { type: Number });
-  Model.defineProperty('coinType', { type: String });
-  Model.defineProperty('expiration', { type: Date });
+  Model.defineProperty('content', {
+    type: String, dataType: 'text',
+  });
+  Model.defineProperty('blocked', {
+    type: Boolean,
+  });
+  Model.defineProperty('affordable', {
+    type: Boolean,
+  });
+  Model.defineProperty('price', {
+    type: Number,
+  });
+  Model.defineProperty('coinType', {
+    type: String,
+  });
+  Model.defineProperty('expiration', {
+    type: Date,
+  });
 
+  Model.mixin('MetaPost', true);
   Model.mixin('Dropbox', true);
 
   Model.mixin('Likes', {

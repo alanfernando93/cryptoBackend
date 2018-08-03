@@ -24,7 +24,8 @@
         "userModel": "user",
         "description": " dislikes news instance for the given userId"
       }
-    ]
+    ],
+    "MetaPost": true
   },
   "properties": {
     "title": "string",

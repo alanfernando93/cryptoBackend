@@ -10,6 +10,10 @@
     "Timestamp": true
   },
   "properties": {
+    "content": {
+      "type": "string",
+      "dataType": "text"
+    },
     "qualidication": {
       "type": "number"
     }

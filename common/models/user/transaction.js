@@ -6,7 +6,11 @@ module.exports = (Transaction) => {
     Transaction.find({
       where: {
         and: [{
-          and: [{senderId: req.body.sender}, {recieverId: req.body.reciever}],
+          and: [{
+            senderId: req.body.sender,
+          }, {
+            recieverId: req.body.reciever,
+          }],
         }, {
           activo: true,
         }],
@@ -15,7 +19,7 @@ module.exports = (Transaction) => {
       console.log(transfer);
       if (transfer.length > 0) {
         Transaction.modPuntos(req.body.reciever, transfer[0].monto);
-        Transaction.updateAll({ id: transfer[0].id }, { activo: false });
+        transfer.save();
       } else {
         console.log('no tiene ningun cobro pendiente');
       };
@@ -24,12 +28,15 @@ module.exports = (Transaction) => {
   };
 
   Transaction.remoteMethod('closeChat', {
-    http: { path: '/closeChat', verb: 'post' },
-    accepts: [
-      { arg: 'req', type: 'object', 'http': { source: 'req' } },
-      { arg: 'res', type: 'object', 'http': { source: 'res' } },
-    ],
-    returns: { arg: '', type: 'object' },
+    http: {
+      path: '/closeChat', verb: 'post',
+    },
+    accepts: [{
+      arg: 'req', type: 'object', 'http': {source: 'req'},
+    }, {
+      arg: 'res', type: 'object', 'http': {source: 'res'},
+    }],
+    returns: {arg: '', type: 'object'},
   });
 
   Transaction.modPuntos = (userId, monto) => {
@@ -67,19 +74,22 @@ module.exports = (Transaction) => {
     Transaction.find({
       where: {
         and: [{
-          or:
-            [{
-              and: [
-                { senderId: senderId },
-                { recieverId: receptorId },
-              ]
+          or: [{
+            and: [{
+              senderId: senderId,
             }, {
-              and: [
-                { senderId: receptorId },
-                { recieverId: senderId },
-              ]
+              recieverId: receptorId,
             }],
-        }, { activo: true }]
+          }, {
+            and: [{
+              senderId: receptorId,
+            }, {
+              recieverId: senderId,
+            }],
+          }],
+        }, {
+          activo: true,
+        }],
       },
     }).then(transfer => {
       // obtencion del solicitante y aumento de creditos en caso verdadero
@@ -87,8 +97,8 @@ module.exports = (Transaction) => {
         Transaction.modPuntos(senderId, -costo);
         if (senderId == transfer[0].senderId) {
           // flujo de aumento de creditos
-          Transaction.updateAll({ id: transfer[0].id },
-            { monto: transfer[0].monto + costo });
+          transfer[0].monto += costo;
+          transfer.save();
         } else {
           console.log('el mensaje es gratuito');
         };
@@ -105,5 +115,5 @@ module.exports = (Transaction) => {
         });
       };
     });
-  }
+  };
 };

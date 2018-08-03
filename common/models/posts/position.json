@@ -28,6 +28,11 @@
   },
   "validations": [],
   "relations": {
+    "signal": {
+      "type": "belongsTo",
+      "model": "signal",
+      "foreignKey": ""
+    }
   },
   "acls": [],
   "methods": {}

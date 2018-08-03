@@ -24,12 +24,14 @@ module.exports = (Follow) => {
   };
 
   Follow.remoteMethod('follow', {
-    http: { path: '/follow', verb: 'post' },
+    http: {
+      path: '/follow', verb: 'post',
+    },
     accepts: [
-      { arg: 'req', type: 'object', 'http': { source: 'req' } },
-      { arg: 'res', type: 'object', 'http': { source: 'res' } },
+      {arg: 'req', type: 'object', 'http': {ource: 'req'}},
+      {arg: 'res', type: 'object', 'http': {source: 'res'}},
     ],
-    returns: { arg: 'follow', type: 'object' },
+    returns: {arg: 'follow', type: 'object' ,
   });
 
   Follow.afterRemote('follow', (ctx, model, next) => {

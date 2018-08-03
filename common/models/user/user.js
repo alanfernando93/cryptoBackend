@@ -30,7 +30,6 @@ module.exports = function(User) {
     if (ctx.instance != undefined) {
       if (ctx.instance.realm == 'normal') {
         rol.find({where: {name: 'normal'}}, (err, role) => {
-          console.log(role)
           if (err) throw err;
           map.upsertWithWhere({principalId: ctx.instance.id}, {
             principalType: 'NORMAL',
@@ -62,7 +61,7 @@ module.exports = function(User) {
     next();
   });
 
-  User.famaUser = (userId, punto, coinType) => {
+  User.fameUser = (userId, punto, coinType) => {
     User.findById(userId)
       .then(data => {
         User.app.models.coin.find({

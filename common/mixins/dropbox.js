@@ -17,20 +17,26 @@ module.exports = (Model, options) => {
   var defaultOptions = {
     maxFileSize: 10 * 1024 * 1024, // 10 MB
   };
-  Model.defineProperty('image', { type: String });
+  Model.defineProperty('image', {type: String});
 
   Model.dropbox = (provider, req, res, options, cb) => {
 
   };
 
   Model.remoteMethod('dropbox', {
-    accepts: [
-      { arg: 'id', type: 'string', required: true },
-      { arg: 'req', type: 'object', 'http': { source: 'req' } },
-      { arg: 'res', type: 'object', 'http': { source: 'res' } },
-    ],
-    returns: { arg: 'result', type: 'string' },
-    http: { path: '/:id/dropbox', verb: 'post' },
+    accepts: [{
+      arg: 'id', type: 'string', required: true,
+    }, {
+      arg: 'req', type: 'object', 'http': {source: 'req'},
+    }, {
+      arg: 'res', type: 'object', 'http': {source: 'res'},
+    }],
+    returns: {
+      arg: 'result', type: 'string',
+    },
+    http: {
+      path: '/:id/dropbox', verb: 'post',
+    },
     description: 'load main image in dropbox',
   });
 
@@ -38,11 +44,12 @@ module.exports = (Model, options) => {
     var modelName = '/' + Model.definition.name;
     var iterable = [];
     ctx.result.forEach((element) => {
-      var request = { path: `${modelName}/${element.image}` };
+      var request = {path: `${modelName}/${element.image}`};
       var promise = dbx.filesGetTemporaryLink(request).then(resp => {
         element.perfilLink = resp.link;
       }).catch(err => {
-        console.error(`Error: no se pudo conseguir link temporal de la imagen ${modelName}/${element.image}`);
+        console.error('Error: no se pudo conseguir link temporal de la imagen',
+          modelName, '/', element.image);
       });
       iterable.push(promise);
     });
@@ -55,11 +62,12 @@ module.exports = (Model, options) => {
     var modelName = '/' + Model.definition.name;
     var iterable = [];
     var expReg = /dropbox:["']{0,1}([^"' >]*)/g;
-    var request = { path: `${modelName}/${ctx.result.image}` };
+    var request = {path: `${modelName}/${ctx.result.image}`};
     var promise = dbx.filesGetTemporaryLink(request).then(resp => {
       ctx.result.perfilLink = resp.link;
     }).catch(error => {
-      console.error(`Error: no se pudo conseguir link temporal de la imagen ${modelName}/${ctx.result.image}`);
+      console.error('Error: no se pudo conseguir link temporal de la imagen',
+        modelName, '/', ctx.result.image);
     });
     iterable.push(promise);
 
@@ -73,11 +81,13 @@ module.exports = (Model, options) => {
         codImg.forEach((element) => {
           var nameImg = element.split(':')[1];
           ctx.result.imgsEditor.push(nameImg);
-          var x = dbx.filesGetTemporaryLink({ path: `${modelName}/${nameImg}` }).then(resp => {
-            ctx.result[content] = ctx.result[content].replace(element, resp.link);
-          }).catch(error => {
-            console.log(error);
-          });
+          var x = dbx.filesGetTemporaryLink({path: `${modelName}/${nameImg}`})
+            .then(resp => {
+              ctx.result[content] = ctx.result[content]
+                .replace(element, resp.link);
+            }).catch(error => {
+              console.log(error);
+            });
           iterable.push(x);
         });
       });
