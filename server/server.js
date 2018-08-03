@@ -2,6 +2,7 @@
 
 var loopback = require('loopback');
 var boot = require('loopback-boot');
+var sockets = require('socket.io');
 
 var app = module.exports = loopback();
 
@@ -25,9 +26,9 @@ try {
   process.exit(1); // fatal
 }
 
-app.start = function() {
+app.start = () => {
   // start the web server
-  return app.listen(function() {
+  return app.listen(() => {
     app.emit('started');
     var baseUrl = app.get('url').replace(/\/$/, '');
     console.log('Web server listening at: %s', baseUrl);
@@ -40,13 +41,29 @@ app.start = function() {
 
 // Bootstrap the application, configure models, datasources and middleware.
 // Sub-apps like REST API are mounted via boot scripts.
-boot(app, __dirname, function(err) {
+boot(app, __dirname, (err) => {
   if (err) throw err;
-
-  // start the server if `$ node server.js`
-  if (require.main === module)
-    app.start();
 });
+
+// start the server if `$ node server.js`
+
+if (require.main === module) {
+  // app.start();
+  app.io = sockets(app.start());
+  app.io.on('connection', (socket) => {
+    console.log('a user connected');
+    console.log('id : ' + socket.id);
+
+    socket.on('disconnect', () => {
+      console.log('user disconnected');
+    });
+
+    socket.on('message', (message) => {
+      console.log('Message received: ' + message);
+      app.io.emit('message', { type: 'news-message', text: message });
+    });
+  });
+}
 
 // The access token is only available after boot
 app.middleware('auth', loopback.token({

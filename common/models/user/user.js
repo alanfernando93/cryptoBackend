@@ -29,13 +29,12 @@ module.exports = function(User) {
     var map = User.app.models.RoleMapping;
     if (ctx.instance != undefined) {
       if (ctx.instance.realm == 'normal') {
-        rol.find({where: {name: 'normal'}}, (err, rol) => {
-          if (err)
-            throw err;
+        rol.find({where: {name: 'normal'}}, (err, role) => {
+          if (err) throw err;
           map.upsertWithWhere({principalId: ctx.instance.id}, {
             principalType: 'NORMAL',
             principalId: ctx.instance.id,
-            roleId: rol[0].id,
+            roleId: role[0].id,
           }, (err, rolemapping) => {
             if (err)
               console.log('error asignando roles');
@@ -61,4 +60,42 @@ module.exports = function(User) {
     }
     next();
   });
+
+  User.famaUser = (userId, point, coinType, reliability) => {
+    User.findById(userId).then(data => {
+      User.app.models.coin.find({
+        where: {
+          name: coinType,
+        },
+      }, (err, coin) => {
+        if (data.fame == null) {
+          // @dev valor : valor que tenga la moneda
+          data.fame = [{
+            id: coin[0].id, value: 2, symbol: coin[0].symbol,
+          },
+          ];
+        } else {
+          var element = data.fame.find(
+            element => element.id === coin[0].id);
+          if (element === undefined) {
+            data.fame.push({
+              id: coin[0].id, value: 2, symbol: coin[0].symbol,
+            });
+          } else {
+            // @dev valor que se autoincrementa para segun al valor de la moneda
+            data.fame[data.fame.indexOf(element)].value += point * 2;
+          }
+        }
+        data.points += point;
+        data.reliability += reliability;
+        data.save();
+        // User.updateAll({id: userId}, {
+        //   points: data.points + point,
+        //   reliability: data.reliability + reliability,
+        //   fame: data.fame,
+        // }).then(data => {
+        // });
+      });
+    });
+  };
 };
