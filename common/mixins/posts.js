@@ -53,7 +53,7 @@ module.exports = (Model, options) => {
       ctx.result.dislikes.users.push(userId);
     }
     ctx.result.dislikes.total = ctx.result.dislikes.users.length;
-    Model.app.models.usuario.famaUser(userId, global.rpl, id, global.rpfl);
+    // Model.app.models.usuario.fameUser(userId, global.rpl, id, global.rpfl);
     next();
   });
 
@@ -71,7 +71,7 @@ module.exports = (Model, options) => {
       ctx.result.likes.users.push(userId);
     }
     ctx.result.likes.total = ctx.result.likes.users.length;
-    Model.app.models.usuario.famaUser(userId, global.rpl, id, global.rpfl);
+    // Model.app.models.usuario.fameUser(userId, global.rpl, id, global.rpfl);
     next();
   });
 

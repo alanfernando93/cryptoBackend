@@ -31,7 +31,7 @@ module.exports = (Follow) => {
       {arg: 'req', type: 'object', 'http': {ource: 'req'}},
       {arg: 'res', type: 'object', 'http': {source: 'res'}},
     ],
-    returns: {arg: 'follow', type: 'object' ,
+    returns: {arg: 'follow', type: 'object'},
   });
 
   Follow.afterRemote('follow', (ctx, model, next) => {
