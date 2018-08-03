@@ -60,7 +60,7 @@ if (require.main === module) {
 
     socket.on('message', (message) => {
       console.log('Message received: ' + message);
-      app.io.emit('message', {type: 'news-message', text: message});
+      app.io.emit('message', { type: 'news-message', text: message });
     });
   });
 }
