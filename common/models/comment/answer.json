@@ -15,6 +15,9 @@
     },
     "modelName": {
       "type": "string"
+    },
+    "modelId": {
+      "type": "number"
     }
   },
   "validations": [],

@@ -10,7 +10,7 @@
       "type": "string"
     },
     "correspondence": {
-      "type": "string"
+      "type": "number"
     },
     "link": {
       "type": "string"

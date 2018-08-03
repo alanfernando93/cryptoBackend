@@ -15,9 +15,6 @@
     },
     "comment": {
       "type": "string"
-    },
-    "posts": {
-      "type": "string"
     }
   },
   "validations": [],
@@ -47,6 +44,11 @@
         "foreignKey": "modelId",
         "discriminator": "modelName"
       }
+    },
+    "denounced": {
+      "type": "belongsTo",
+      "model": "user",
+      "foreignKey": ""
     }
   },
   "acls": [],

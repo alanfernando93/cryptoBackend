@@ -86,6 +86,10 @@
         "foreignKey": "modelId",
         "discriminator": "modelName"
       }
+    },
+    "position": {
+      "type": "hasMany",
+      "model": "position"
     }
   },
   "acls": [],

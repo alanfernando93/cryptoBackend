@@ -5,6 +5,9 @@
   "options": {
     "validateUpsert": true
   },
+  "mixins": {
+    "Dropbox": true
+  },
   "restrictResetPasswordTokenScope": true,
   "emailVerificationRequired": true,
   "properties": {
@@ -15,6 +18,14 @@
     "lastName": {
       "type": "string",
       "required": false
+    },
+    "reliability": {
+      "type": "number",
+      "default": 0
+    },
+    "didactic": {
+      "type": "number",
+      "default": 0
     },
     "socialNetworks": {
       "type": [
@@ -34,7 +45,8 @@
       "type": "date"
     },
     "points": {
-      "type": "number"
+      "type": "number",
+      "default": 0
     },
     "precision": {
       "type": "object",
