@@ -30,7 +30,6 @@ module.exports = function(User) {
     if (ctx.instance != undefined) {
       if (ctx.instance.realm == 'normal') {
         rol.find({where: {name: 'normal'}}, (err, role) => {
-          console.log(role)
           if (err) throw err;
           map.upsertWithWhere({principalId: ctx.instance.id}, {
             principalType: 'NORMAL',
@@ -62,38 +61,41 @@ module.exports = function(User) {
     next();
   });
 
-  User.famaUser = (userId, punto, coinType) => {
-    User.findById(userId)
-      .then(data => {
-        User.app.models.coin.find({
-          where: {
-            symbol: coinType,
+  User.famaUser = (userId, point, coinType, reliability) => {
+    User.findById(userId).then(data => {
+      User.app.models.coin.find({
+        where: {
+          name: coinType,
+        },
+      }, (err, coin) => {
+        if (data.fame == null) {
+          // @dev valor : valor que tenga la moneda
+          data.fame = [{
+            id: coin[0].id, value: 2, symbol: coin[0].symbol,
           },
-        }, (err, moneda) => {
-          if (data.fame == null) {
-            // @dev valor : valor que tenga la moneda
-            data.fame = [{
-              id: moneda[0].id, valor: 2, symbol: moneda[0].symbol,
-            },
-            ];
+          ];
+        } else {
+          var element = data.fame.find(
+            element => element.id === coin[0].id);
+          if (element === undefined) {
+            data.fame.push({
+              id: coin[0].id, value: 2, symbol: coin[0].symbol,
+            });
           } else {
-            var element = data.fame.find(
-              element => element.id === moneda[0].id);
-            if (element === undefined) {
-              data.fama.push({
-                id: moneda[0].id, valor: 2, symbol: moneda[0].symbol,
-              });
-            } else {
-              // @dev valor que se autoincrementa para segun al valor de la moneda
-              data.fame[data.fame.indexOf(element)].valor += punto * 2;
-            }
+            // @dev valor que se autoincrementa para segun al valor de la moneda
+            data.fame[data.fame.indexOf(element)].value += point * 2;
           }
-          User.updateAll({id: userId}, {
-            points: data.points + punto,
-            fame: data.fame,
-          }).then(data => {
-          });
-        });
+        }
+        data.points += point;
+        data.reliability += reliability;
+        data.save();
+        // User.updateAll({id: userId}, {
+        //   points: data.points + point,
+        //   reliability: data.reliability + reliability,
+        //   fame: data.fame,
+        // }).then(data => {
+        // });
       });
+    });
   };
 };

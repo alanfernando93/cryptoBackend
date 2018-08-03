@@ -52,13 +52,15 @@ if (require.main === module) {
   app.io = sockets(app.start());
   app.io.on('connection', (socket) => {
     console.log('a user connected');
+    console.log('id : ' + socket.id);
+
     socket.on('disconnect', () => {
       console.log('user disconnected');
     });
 
     socket.on('message', (message) => {
-      console.log('Message received ' + message);
-      app.io.emit('message', {type: 'new-message', text: message});
+      console.log('Message received: ' + message);
+      app.io.emit('message', {type: 'news-message', text: message});
     });
   });
 }
