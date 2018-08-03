@@ -33,6 +33,11 @@
       "model": "idea",
       "foreignKey": "coinId"
     },
+    "project": {
+      "type": "hasMany",
+      "model": "project",
+      "foreignKey": "coinId"
+    },
     "news": {
       "type": "hasMany",
       "model": "new",
